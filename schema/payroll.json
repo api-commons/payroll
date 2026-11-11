@@ -13,7 +13,8 @@
       "x-commons-spellings": [
         "id",
         "remote_id",
-        "payrollId"
+        "payrollId",
+        "payroll_id"
       ]
     },
     "pay_date": {
@@ -29,6 +30,16 @@
         "checkDate",
         "payDate",
         "PaymentDate"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.467,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "status",
+        "state"
       ]
     },
     "period_end": {
@@ -55,21 +66,11 @@
         "periodStartDate"
       ]
     },
-    "status": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.4,
-      "x-commons-providers": 6,
-      "x-commons-spellings": [
-        "status",
-        "state"
-      ]
-    },
     "currency": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.267,
-      "x-commons-providers": 4,
+      "x-commons-share": 0.333,
+      "x-commons-providers": 5,
       "x-commons-spellings": [
         "currency",
         "currencyCode",
@@ -88,6 +89,28 @@
         "NetPay"
       ]
     },
+    "type": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.267,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "type",
+        "run_type"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.2,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "created_at",
+        "createdAt",
+        "createdOn"
+      ],
+      "format": "date-time"
+    },
     "pay_period": {
       "type": "object",
       "x-commons-tier": "extended",
@@ -97,15 +120,17 @@
         "payPeriod"
       ]
     },
-    "type": {
+    "updated_at": {
       "type": "string",
       "x-commons-tier": "extended",
       "x-commons-share": 0.2,
       "x-commons-providers": 3,
       "x-commons-spellings": [
-        "type",
-        "run_type"
-      ]
+        "modified_at",
+        "updated_at",
+        "updatedAt"
+      ],
+      "format": "date-time"
     }
   },
   "required": [

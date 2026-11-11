@@ -12,6 +12,7 @@ concepts:
       pay_date: paymentDate
       status: status
       currency: currency
+      created_at: createdOn
       pay_period: payPeriod
     core_coverage: 1.0
     evidence:

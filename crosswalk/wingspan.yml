@@ -6,7 +6,11 @@ concepts:
   payroll:
     path_segment:
     - payroll
-    properties: {}
+    properties:
+      status: status
+      currency: currency
+      created_at: createdAt
+      updated_at: updatedAt
     core_coverage: 0.0
     evidence:
     - openapi/_original/wingspan-payments-openapi-original.yml#GET /payments/reports/payroll/{payrollId}

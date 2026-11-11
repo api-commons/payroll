@@ -86,6 +86,7 @@ concepts:
       - id
       - remote_id
       - payrollId
+      - payroll_id
     - name: pay_date
       tier: extended
       providers: 7
@@ -99,6 +100,14 @@ concepts:
       - checkDate
       - payDate
       - PaymentDate
+    - name: status
+      tier: extended
+      providers: 7
+      share: 0.467
+      type: string
+      spellings:
+      - status
+      - state
     - name: period_end
       tier: extended
       providers: 6
@@ -119,18 +128,10 @@ concepts:
       - period_start
       - payPeriodStart
       - periodStartDate
-    - name: status
-      tier: extended
-      providers: 6
-      share: 0.4
-      type: string
-      spellings:
-      - status
-      - state
     - name: currency
       tier: extended
-      providers: 4
-      share: 0.267
+      providers: 5
+      share: 0.333
       type: string
       spellings:
       - currency
@@ -146,6 +147,23 @@ concepts:
       - net_pay
       - netPay
       - NetPay
+    - name: type
+      tier: extended
+      providers: 4
+      share: 0.267
+      type: string
+      spellings:
+      - type
+      - run_type
+    - name: created_at
+      tier: extended
+      providers: 3
+      share: 0.2
+      type: string
+      spellings:
+      - created_at
+      - createdAt
+      - createdOn
     - name: pay_period
       tier: extended
       providers: 3
@@ -153,30 +171,33 @@ concepts:
       type: object
       spellings:
       - payPeriod
-    - name: type
+    - name: updated_at
       tier: extended
       providers: 3
       share: 0.2
       type: string
       spellings:
-      - type
-      - run_type
-    long_tail_count: 122
+      - modified_at
+      - updated_at
+      - updatedAt
+    long_tail_count: 140
     long_tail_sample:
     - account_id
     - company_debit
-    - created_at
     - deductions
+    - employee_id
     - employee_taxes
     - employer_taxes
     - gross_pay
     - legal_entity_id
     - metadata
+    - notes
     - pay_group_id
     - tax
-    - updated_at
     - allowances
+    - amount
     - approval_date
+    - approver_name
     - authorization_callback_url
     - benefits_total
     - bonus
@@ -195,14 +216,12 @@ concepts:
     - deferred_payroll_taxes
     - depot_id
     - descriptor
+    - due_date
     - employee_benefits_deductions
     - employee_compensations
     - employee_details
-    - employee_id
     - employer_benefits
     - employer_contributions
-    - employer_contributions_total
-    - employer_id
   payslip:
     segments_seen:
       payslips: 11
@@ -395,7 +414,7 @@ concepts:
       spellings:
       - totalDeductions
       - total_deductions
-    long_tail_count: 259
+    long_tail_count: 271
     long_tail_sample:
     - employee_external_id
     - gross_pay_ytd
@@ -421,6 +440,7 @@ concepts:
     - bank_payments
     - base_pay_rate
     - base_rate
+    - benefit_lines
     - benefits_in_kind_adjustments
     - business_address
     - business_name
@@ -432,11 +452,10 @@ concepts:
     - company_id
     - contact_name
     - content_type
+    - court_order_lines
     - cpf_adjustments
     - cpf_employee_contribution_ytd
     - cpf_employer_contribution_ytd
-    - created_utc
-    - crew_id
   pay_group:
     segments_seen:
       pay-groups: 2

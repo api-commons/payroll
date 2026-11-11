@@ -7,9 +7,14 @@ concepts:
     path_segment:
     - payrolls
     properties:
-      id: id
+      id:
+      - id
+      - payroll_id
       period_end: end_date
       period_start: start_date
+      type: type
+      created_at: created_at
+      updated_at: updated_at
     core_coverage: 1.0
     evidence:
     - openapi/_original/when-i-work-openapi.yml#GET /2/payrolls

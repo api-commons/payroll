@@ -390,8 +390,14 @@
      "finalized_at": "string",
      "created_at": "string",
      "updated_at": "string",
-     "payroll": "object",
-     "payrollhours": "array"
+     "payroll_id": "integer",
+     "type": "integer",
+     "type_label": "string",
+     "user_id": "integer",
+     "position_id": "integer",
+     "hours": "number",
+     "rate": "number",
+     "total": "number"
     },
     "evidence": [
      "openapi/_original/when-i-work-openapi.yml#GET /2/payrolls",
@@ -407,8 +413,54 @@
      "GET item"
     ],
     "properties": {
-     "invoices": "array",
-     "parentInvoice": "object"
+     "amount": "number",
+     "createdAt": "string",
+     "currency": "string",
+     "dueDate": "string",
+     "invoiceId": "string",
+     "invoiceNumber": "string",
+     "invoicePdf": "string",
+     "lineItems": "array",
+     "member": "object",
+     "memberClientId": "string",
+     "memberId": "string",
+     "receiptPdf": "string",
+     "status": "string",
+     "updatedAt": "string",
+     "approverName": [
+      "string",
+      "null"
+     ],
+     "eventActors": null,
+     "labels": null,
+     "memberExternalId": [
+      "number",
+      "null"
+     ],
+     "notes": [
+      "string",
+      "null"
+     ],
+     "paidDate": [
+      "string",
+      "null"
+     ],
+     "payoutDestination": [
+      "string",
+      "null"
+     ],
+     "projectName": [
+      "string",
+      "null"
+     ],
+     "purchaseOrderNumber": [
+      "string",
+      "null"
+     ],
+     "sentDate": [
+      "string",
+      "null"
+     ]
     },
     "evidence": [
      "openapi/_original/wingspan-payments-openapi-original.yml#GET /payments/reports/payroll/{payrollId}"
@@ -500,10 +552,6 @@
      "Reimbursement": "number",
      "NetPay": "number",
      "ValidationErrors": "array",
-     "pagination": "object",
-     "problem": "object",
-     "payRuns": "array",
-     "payRun": "object",
      "payRunID": "string",
      "payrollCalendarID": "string",
      "periodStartDate": "string",
@@ -515,7 +563,10 @@
      "payRunType": "string",
      "calendarType": "string",
      "postedDateTime": "string",
-     "paySlips": "array"
+     "paySlips": "array",
+     "pagination": "object",
+     "problem": "object",
+     "payRun": "object"
     },
     "evidence": [
      "openapi/_original/xero-payroll-au-openapi.yml#GET /PayRuns",
@@ -1085,10 +1136,17 @@
      "GET collection"
     ],
     "properties": {
-     "current_page": "integer",
-     "payslips": "array",
-     "total_count": "integer",
-     "total_pages": "integer"
+     "file": "object",
+     "has_employee_payroll_overviews": "boolean",
+     "payroll_output": "object",
+     "payroll_run": "object",
+     "payslip": "object",
+     "employment_id": "string",
+     "expected_payout_date": "string",
+     "id": "string",
+     "issued_at": "string",
+     "net_pay_converted_amount": "integer",
+     "net_pay_source_amount": "integer"
     },
     "evidence": [
      "openapi/_original/remote-openapi-original.json#GET /v1/employee/payslips",
@@ -1311,10 +1369,6 @@
      "SuperannuationLines": "array",
      "TaxLines": "array",
      "UpdatedDateUTC": "string",
-     "pagination": "object",
-     "problem": "object",
-     "paySlips": "array",
-     "paySlip": "object",
      "paySlipID": "string",
      "employeeID": "string",
      "payRunID": "string",
@@ -1344,7 +1398,14 @@
      "employerTaxLines": "array",
      "statutoryDeductionLines": "array",
      "taxSettings": "object",
-     "grossEarningsHistory": "object"
+     "grossEarningsHistory": "object",
+     "pagination": "object",
+     "problem": "object",
+     "paySlip": "object",
+     "totalCourtOrders": "number",
+     "totalBenefits": "number",
+     "benefitLines": "array",
+     "courtOrderLines": "array"
     },
     "evidence": [
      "openapi/_original/xero-payroll-au-openapi.yml#GET /Payslip/{PayslipID}",
