@@ -1,19 +1,20 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/api-commons/payroll/main/schema/pay_stub.json",
-  "title": "Pay Stub",
-  "description": "The common pay_stub in Payroll, distilled from 15 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "$id": "https://raw.githubusercontent.com/api-commons/payroll/main/schema/payslip.json",
+  "title": "Payslip",
+  "description": "The common payslip in Payroll, distilled from 15 providers' own OpenAPI. Each property records the share of them that declare it.",
   "type": "object",
   "properties": {
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.8,
-      "x-commons-providers": 12,
+      "x-commons-share": 0.867,
+      "x-commons-providers": 13,
       "x-commons-spellings": [
         "id",
         "remote_id",
-        "Id"
+        "Id",
+        "PayslipID"
       ]
     },
     "gross_pay": {
@@ -114,7 +115,7 @@
         "EarningsLines"
       ]
     },
-    "pay_run_id": {
+    "payroll_id": {
       "type": "string",
       "x-commons-tier": "extended",
       "x-commons-share": 0.333,
@@ -194,7 +195,7 @@
   ],
   "x-commons": {
     "context": "payroll",
-    "concept": "pay_stub",
+    "concept": "payslip",
     "providers": 15,
     "generated": "2026-11-10",
     "version": "0.1.0-draft.20261110",

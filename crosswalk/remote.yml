@@ -3,7 +3,7 @@ apis_io: https://apis.io/providers/remote/
 context: payroll
 generated: '2026-11-10'
 concepts:
-  pay_run:
+  payroll:
     path_segment:
     - payroll-runs
     properties:
@@ -17,7 +17,7 @@ concepts:
     evidence:
     - openapi/_original/remote-openapi-original.json#GET /v1/payroll-runs
     - openapi/_original/remote-openapi-original.json#GET /v1/payroll-runs/{payroll_run_id}
-  pay_stub:
+  payslip:
     path_segment:
     - payslips
     properties:

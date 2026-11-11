@@ -3,7 +3,7 @@ apis_io: https://apis.io/providers/smarthr/
 context: payroll
 generated: '2026-11-10'
 concepts:
-  pay_run:
+  payroll:
     path_segment:
     - payrolls
     properties:
@@ -17,13 +17,13 @@ concepts:
     - openapi/_original/kufu-smarthr-openapi.json#GET /v1/payrolls/{id}
     - openapi/_original/kufu-smarthr-openapi.json#PATCH /v1/payrolls/{id}
     - openapi/_original/kufu-smarthr-openapi.json#POST /v1/payrolls
-  pay_stub:
+  payslip:
     path_segment:
     - payslips
     properties:
       id: id
       deductions: deductions
-      pay_run_id: payroll_id
+      payroll_id: payroll_id
     core_coverage: 0.333
     evidence:
     - openapi/_original/kufu-smarthr-openapi.json#DELETE /v1/payrolls/{payroll_id}/payslips/{id}

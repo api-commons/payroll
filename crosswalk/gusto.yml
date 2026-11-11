@@ -3,7 +3,7 @@ apis_io: https://apis.io/providers/gusto/
 context: payroll
 generated: '2026-11-10'
 concepts:
-  pay_run:
+  payroll:
     path_segment:
     - payrolls
     properties: {}
@@ -11,7 +11,7 @@ concepts:
     evidence:
     - openapi/_original/gusto-openapi.yml#GET /v1/companies/{company_id}/payrolls
     - openapi/_original/gusto-openapi.yml#POST /v1/companies/{company_id}/payrolls
-  pay_schedule:
+  pay_group:
     path_segment:
     - pay_schedules
     properties: {}

@@ -3,7 +3,7 @@ apis_io: https://apis.io/providers/deel-com/
 context: payroll
 generated: '2026-11-10'
 concepts:
-  pay_stub:
+  payslip:
     path_segment:
     - payslips
     - paystubs
@@ -15,7 +15,7 @@ concepts:
       period_end: period_end
       period_start: period_start
       currency: currency
-      pay_run_id: payroll_id
+      payroll_id: payroll_id
       pay_date: payment_date
       created_at: created_at
       status: status

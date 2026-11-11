@@ -2,7 +2,7 @@
  "cohort_size": 192,
  "unreadable": [],
  "concepts": {
-  "pay_run": {
+  "payroll": {
    "bindbee": {
     "segments": [
      "payroll-runs"
@@ -530,7 +530,7 @@
     ]
    }
   },
-  "pay_stub": {
+  "payslip": {
    "argyle": {
     "segments": [
      "paystubs"
@@ -1357,7 +1357,7 @@
     ]
    }
   },
-  "pay_schedule": {
+  "pay_group": {
    "bindbee": {
     "segments": [
      "pay-groups"

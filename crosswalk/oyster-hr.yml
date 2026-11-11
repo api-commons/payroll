@@ -3,17 +3,18 @@ apis_io: https://apis.io/providers/oyster-hr/
 context: payroll
 generated: '2026-11-10'
 concepts:
-  pay_run:
+  payroll:
     path_segment:
     - payroll
     properties:
+      id: payrollId
       status: state
       currency: currencyCode
-    core_coverage: 0.0
+    core_coverage: 1.0
     evidence:
     - openapi/_original/oyster-hr-endpoints-openapi.yml#GET /v1/payroll
     - openapi/_original/oyster-hr-endpoints-openapi.yml#GET /v1/payroll/{id}
-  pay_stub:
+  payslip:
     path_segment:
     - payslips
     properties:

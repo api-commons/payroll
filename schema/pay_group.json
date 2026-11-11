@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/api-commons/payroll/main/schema/pay_schedule.json",
-  "title": "Pay Schedule",
-  "description": "The common pay_schedule in Payroll, distilled from 3 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "$id": "https://raw.githubusercontent.com/api-commons/payroll/main/schema/pay_group.json",
+  "title": "Pay Group",
+  "description": "The common pay_group in Payroll, distilled from 3 providers' own OpenAPI. Each property records the share of them that declare it.",
   "type": "object",
   "properties": {
     "id": {
@@ -30,7 +30,7 @@
   ],
   "x-commons": {
     "context": "payroll",
-    "concept": "pay_schedule",
+    "concept": "pay_group",
     "providers": 3,
     "generated": "2026-11-10",
     "version": "0.1.0-draft.20261110",

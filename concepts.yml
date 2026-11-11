@@ -1,8 +1,8 @@
 context: payroll
 name: Payroll
 intro: >-
-  The common payroll vocabulary -- the pay runs a company processes, the pay stubs they
-  produce, the schedules they run on, and the earnings, deductions and taxes on every stub
+  The common payroll vocabulary -- the payrolls a company runs, the payslips they
+  produce, the pay groups they run for, and the earnings, deductions and taxes on every payslip
   -- distilled from the APIs that already exist. Employees themselves belong to the HR
   context.
 tags: [Payroll, Global Payroll, Employer of Record, EOR, Payroll Processing, Human Resources, HRIS, HR Tech, HCM, Workforce Management]
@@ -26,7 +26,7 @@ common_fields:
   pay_date: [check_date, payment_date, paid_at, payday, pay_day, payout_date]
 
 concepts:
-  pay_run:
+  payroll:
     segments: [payrolls, payroll, pay_runs, pay-runs, payruns, payroll_runs, payroll-runs, payrollruns]
     aliases:
       gross_pay: [gross, gross_amount, total_gross, gross_earnings, gross_pay_amount]
@@ -34,26 +34,26 @@ concepts:
       employer_taxes: [employer_tax, company_taxes, employer_tax_amount]
       employee_taxes: [employee_tax, withholdings, tax_withheld]
       type: [run_type, payroll_type, off_cycle, kind]
-      pay_schedule_id: [pay_schedule, pay_group_id, pay_group, schedule_id, pay_calendar_id]
+      pay_group_id: [pay_group, pay_schedule_id, pay_schedule, schedule_id, pay_calendar_id]
       employee_count: [employees_count, headcount, number_of_employees]
-  pay_stub:
-    segments: [pay_stubs, pay-stubs, paystubs, payslips, payslip, pay_statements, pay-statements, paystatements, pay_slips, payroll_items, paychecks, payments@payrolls|payroll|pay_runs|payruns]
+  payslip:
+    segments: [payslips, payslip, pay_stubs, pay-stubs, paystubs, pay_statements, pay-statements, paystatements, pay_slips, payroll_items, paychecks, payments@payrolls|payroll|pay_runs|payruns]
     aliases:
       gross_pay: [gross, gross_amount, total_gross, gross_earnings]
       net_pay: [net, net_amount, total_net, take_home]
       earnings: [earning_lines, earnings_lines, wages]
       deductions: [deduction_lines, deductions_lines, contributions]
       taxes: [tax_lines, employee_taxes, withholdings]
-      pay_run_id: [payroll_id, payroll, pay_run, payrun_id, run_id]
-  pay_schedule:
-    requires: [pay_run]
-    segments: [pay_schedules, pay-schedules, payschedules, pay_groups, pay-groups, paygroups, pay_calendars, pay_periods, pay-periods, payperiods, pay_frequencies]
+      payroll_id: [pay_run_id, payroll, pay_run, payrun_id, run_id]
+  pay_group:
+    requires: [payroll]
+    segments: [pay_groups, pay-groups, paygroups, pay_schedules, pay-schedules, payschedules, pay_calendars, pay_periods, pay-periods, payperiods, pay_frequencies]
     aliases:
       frequency: [pay_frequency, period, interval, cycle, schedule_type, type]
       anchor_date: [first_pay_date, anchor_pay_date, start_date, next_pay_date]
   # earning, deduction and tax were measured as resources and dropped: 3, 5 and 2 providers
   # expose them on their own (and `benefits` turned out to be benefit enrollment). They are
-  # lines on the pay stub -- its earnings, deductions and taxes properties.
+  # lines on the payslip -- its earnings, deductions and taxes properties.
 
 duplicates:
   ethena: [goethena]
@@ -67,19 +67,21 @@ duplicates:
 findings:
   - "Payroll publishes little: 192 HR and payroll providers in the cohort, 27 mapped. Most
     payroll engines keep their API private or partner-gated."
-  - "A pay stub agrees on gross and net pay (both core), and carries earnings, deductions and
+  - "A payslip agrees on gross and net pay (both core), and carries earnings, deductions and
     taxes as lines -- the market does not model those as resources of their own."
-  - "Pay stubs come from two kinds of provider: payroll engines, and income-verification
+  - "Payslips come from two kinds of provider: payroll engines, and income-verification
     networks (Argyle, Pinwheel) that read stubs on a worker's behalf. Both count."
 decisions:
   - "The HR tags are in the cohort: payroll products are tagged Human Resources far more
     often than Payroll."
   - "Earnings, deductions and taxes are not concepts: measured, 3, 5 and 2 providers expose
-    them as resources. They are properties of the pay stub."
+    them as resources. They are properties of the payslip."
   - "`benefits` is not a deduction: reviewed, it is benefit enrollment, a domain of its own."
   - "A bare `runs` is not a pay run (CI and workflow runs); `payroll-runs`, `payruns` and
     `payrolls` are."
-  - "A pay stub needs no pay run: income-verification providers expose stubs without running
+  - "The names follow the market: `/payrolls` (11 providers, against 7 for any pay-run
+    spelling), `/payslips` (13, against 4 for paystubs) and `/pay-groups` (3, against 1)."
+  - "A payslip needs no payroll: income-verification providers expose payslips without running
     payroll, so `requires` was dropped for it."
   - "Duplicates merged: Argyle (two listings), KUFU into SmartHR (the same company, renamed),
     Remote, Thatch, Ethena, ADP and five Workday listings."

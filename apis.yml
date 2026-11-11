@@ -35,14 +35,14 @@ apis:
   - type: Rules
     url: https://raw.githubusercontent.com/api-commons/schema-commons/main/ruleset/schema-commons-naming.yaml
   - type: JSONSchema
-    name: pay_run
-    url: https://raw.githubusercontent.com/api-commons/payroll/main/schema/pay_run.json
+    name: payroll
+    url: https://raw.githubusercontent.com/api-commons/payroll/main/schema/payroll.json
   - type: JSONSchema
-    name: pay_stub
-    url: https://raw.githubusercontent.com/api-commons/payroll/main/schema/pay_stub.json
+    name: payslip
+    url: https://raw.githubusercontent.com/api-commons/payroll/main/schema/payslip.json
   - type: JSONSchema
-    name: pay_schedule
-    url: https://raw.githubusercontent.com/api-commons/payroll/main/schema/pay_schedule.json
+    name: pay_group
+    url: https://raw.githubusercontent.com/api-commons/payroll/main/schema/pay_group.json
 common:
 - type: License
   url: https://raw.githubusercontent.com/api-commons/payroll/main/LICENSE

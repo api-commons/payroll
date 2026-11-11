@@ -3,7 +3,7 @@ apis_io: https://apis.io/providers/workday/
 context: payroll
 generated: '2026-11-10'
 concepts:
-  pay_run:
+  payroll:
     path_segment:
     - payrollruns
     - payruns
@@ -20,7 +20,7 @@ concepts:
     - openapi/_original/workday-integration-payroll-can-openapi.yml#GET /payrollRuns
     - openapi/_original/workday-integration-payroll-can-openapi.yml#GET /payrollRuns/{ID}
     - openapi/_original/workday-integration-payroll-fra-openapi.yml#GET /payrollRuns
-  pay_stub:
+  payslip:
     path_segment:
     - payslips
     - payments
@@ -32,7 +32,7 @@ concepts:
       currency: currency
       deductions: deductions
       earnings: earnings
-      pay_run_id: payRunId
+      payroll_id: payRunId
       pay_date:
       - paymentDate
       - payDate
@@ -46,7 +46,7 @@ concepts:
     - openapi/_original/workday-payroll-payroll-results-openapi.yml#GET /payRuns/{payRunId}/payments
     - openapi/_original/workday-payroll-payroll-results-openapi.yml#GET /workers/{workerId}/payslips
     - openapi/_original/workday-payroll-payroll-results-openapi.yml#GET /workers/{workerId}/payslips/{payslipId}
-  pay_schedule:
+  pay_group:
     path_segment:
     - paygroups
     properties:

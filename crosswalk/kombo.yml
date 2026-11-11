@@ -3,7 +3,7 @@ apis_io: https://apis.io/providers/kombo/
 context: payroll
 generated: '2026-11-10'
 concepts:
-  pay_run:
+  payroll:
     path_segment:
     - pay-runs
     - payroll
@@ -17,7 +17,7 @@ concepts:
     evidence:
     - openapi/_original/kombo-openapi.json#GET /hris/pay-runs
     - openapi/_original/kombo-openapi.json#POST /custom/datev/push-data/payroll
-  pay_stub:
+  payslip:
     path_segment:
     - payslips
     properties:
@@ -25,12 +25,12 @@ concepts:
       - id
       - remote_id
       employee_id: employee
-      pay_run_id: pay_run
+      payroll_id: pay_run
       metadata: custom_fields
     core_coverage: 0.333
     evidence:
     - openapi/_original/kombo-openapi.json#GET /hris/payslips
-  pay_schedule:
+  pay_group:
     path_segment:
     - pay-groups
     properties:

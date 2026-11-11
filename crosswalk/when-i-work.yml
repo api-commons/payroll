@@ -3,7 +3,7 @@ apis_io: https://apis.io/providers/when-i-work/
 context: payroll
 generated: '2026-11-10'
 concepts:
-  pay_run:
+  payroll:
     path_segment:
     - payrolls
     properties:

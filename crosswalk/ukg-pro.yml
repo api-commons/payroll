@@ -3,7 +3,7 @@ apis_io: https://apis.io/providers/ukg-pro/
 context: payroll
 generated: '2026-11-10'
 concepts:
-  pay_stub:
+  payslip:
     path_segment:
     - pay-statements
     properties:

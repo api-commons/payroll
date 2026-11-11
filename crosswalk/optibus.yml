@@ -3,7 +3,7 @@ apis_io: https://apis.io/providers/optibus/
 context: payroll
 generated: '2026-11-10'
 concepts:
-  pay_run:
+  payroll:
     path_segment:
     - payroll
     properties: {}

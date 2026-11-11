@@ -41,7 +41,7 @@ duplicates:
   - automatic-data-processing
 shared_specs: {}
 concepts:
-  pay_run:
+  payroll:
     segments_seen:
       payrolls: 6
       payroll: 5
@@ -79,14 +79,13 @@ concepts:
     properties:
     - name: id
       tier: core
-      providers: 10
-      share: 0.667
+      providers: 11
+      share: 0.733
       type: string
       spellings:
       - id
       - remote_id
-      - PayRunID
-      - payRunID
+      - payrollId
     - name: pay_date
       tier: extended
       providers: 7
@@ -173,8 +172,7 @@ concepts:
     - gross_pay
     - legal_entity_id
     - metadata
-    - pay_schedule_id
-    - payroll_id
+    - pay_group_id
     - tax
     - updated_at
     - allowances
@@ -204,7 +202,8 @@ concepts:
     - employer_benefits
     - employer_contributions
     - employer_contributions_total
-  pay_stub:
+    - employer_id
+  payslip:
     segments_seen:
       payslips: 11
       paystubs: 4
@@ -247,13 +246,14 @@ concepts:
     properties:
     - name: id
       tier: core
-      providers: 12
-      share: 0.8
+      providers: 13
+      share: 0.867
       type: string
       spellings:
       - id
       - remote_id
       - Id
+      - PayslipID
     - name: gross_pay
       tier: core
       providers: 8
@@ -336,7 +336,7 @@ concepts:
       - earningsLines
       - Wages
       - EarningsLines
-    - name: pay_run_id
+    - name: payroll_id
       tier: extended
       providers: 5
       share: 0.333
@@ -395,7 +395,7 @@ concepts:
       spellings:
       - totalDeductions
       - total_deductions
-    long_tail_count: 260
+    long_tail_count: 259
     long_tail_sample:
     - employee_external_id
     - gross_pay_ytd
@@ -437,7 +437,7 @@ concepts:
     - cpf_employer_contribution_ytd
     - created_utc
     - crew_id
-  pay_schedule:
+  pay_group:
     segments_seen:
       pay-groups: 2
       pay_schedules: 1

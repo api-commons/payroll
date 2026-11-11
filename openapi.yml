@@ -9,12 +9,12 @@ info:
     name: CC BY-NC-SA 4.0
     url: https://creativecommons.org/licenses/by-nc-sa/4.0/
 paths:
-  /pay-runs:
+  /payrolls:
     get:
-      operationId: listPayRuns
-      summary: List pay runs
+      operationId: listPayrolls
+      summary: List payrolls
       tags:
-      - Pay Runs
+      - Payrolls
       x-commons-tier: core
       x-commons-share: 0.812
       responses:
@@ -25,7 +25,7 @@ paths:
               schema:
                 type: array
                 items: &id001
-                  $ref: '#/components/schemas/PayRun'
+                  $ref: '#/components/schemas/Payroll'
       parameters:
       - name: limit
         in: query
@@ -36,10 +36,10 @@ paths:
         schema:
           type: string
     post:
-      operationId: createPayRun
-      summary: Create a pay run
+      operationId: createPayroll
+      summary: Create a payroll
       tags:
-      - Pay Runs
+      - Payrolls
       x-commons-tier: core
       x-commons-share: 0.562
       responses:
@@ -53,14 +53,14 @@ paths:
         content:
           application/json:
             schema: *id001
-  /pay-runs/{pay_run_id}:
+  /payrolls/{payroll_id}:
     parameters:
-    - $ref: '#/components/parameters/pay_run_id'
+    - $ref: '#/components/parameters/payroll_id'
     get:
-      operationId: getPayRun
-      summary: Get a pay run
+      operationId: getPayroll
+      summary: Get a payroll
       tags:
-      - Pay Runs
+      - Payrolls
       x-commons-tier: core
       x-commons-share: 0.688
       responses:
@@ -69,12 +69,12 @@ paths:
           content:
             application/json:
               schema: *id001
-  /pay-stubs:
+  /payslips:
     get:
-      operationId: listPayStubs
-      summary: List pay stubs
+      operationId: listPayslips
+      summary: List payslips
       tags:
-      - Pay Stubs
+      - Payslips
       x-commons-tier: core
       x-commons-share: 0.889
       responses:
@@ -85,7 +85,7 @@ paths:
               schema:
                 type: array
                 items: &id002
-                  $ref: '#/components/schemas/PayStub'
+                  $ref: '#/components/schemas/Payslip'
       parameters:
       - name: limit
         in: query
@@ -95,14 +95,14 @@ paths:
         in: query
         schema:
           type: string
-  /pay-stubs/{pay_stub_id}:
+  /payslips/{payslip_id}:
     parameters:
-    - $ref: '#/components/parameters/pay_stub_id'
+    - $ref: '#/components/parameters/payslip_id'
     get:
-      operationId: getPayStub
-      summary: Get a pay stub
+      operationId: getPayslip
+      summary: Get a payslip
       tags:
-      - Pay Stubs
+      - Payslips
       x-commons-tier: core
       x-commons-share: 0.611
       responses:
@@ -111,12 +111,12 @@ paths:
           content:
             application/json:
               schema: *id002
-  /pay-schedules:
+  /pay-groups:
     get:
-      operationId: listPaySchedules
-      summary: List pay schedules
+      operationId: listPayGroups
+      summary: List pay groups
       tags:
-      - Pay Schedules
+      - Pay Groups
       x-commons-tier: core
       x-commons-share: 1.0
       responses:
@@ -127,7 +127,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/PaySchedule'
+                  $ref: '#/components/schemas/PayGroup'
       parameters:
       - name: limit
         in: query
@@ -139,27 +139,27 @@ paths:
           type: string
 components:
   schemas:
-    PayRun:
-      $ref: ./schema/pay_run.json
-    PayStub:
-      $ref: ./schema/pay_stub.json
-    PaySchedule:
-      $ref: ./schema/pay_schedule.json
+    Payroll:
+      $ref: ./schema/payroll.json
+    Payslip:
+      $ref: ./schema/payslip.json
+    PayGroup:
+      $ref: ./schema/pay_group.json
   parameters:
-    pay_run_id:
-      name: pay_run_id
+    payroll_id:
+      name: payroll_id
       in: path
       required: true
       schema:
         type: string
-    pay_stub_id:
-      name: pay_stub_id
+    payslip_id:
+      name: payslip_id
       in: path
       required: true
       schema:
         type: string
-    pay_schedule_id:
-      name: pay_schedule_id
+    pay_group_id:
+      name: pay_group_id
       in: path
       required: true
       schema:
