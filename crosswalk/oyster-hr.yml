@@ -1,0 +1,23 @@
+provider: oyster-hr
+apis_io: https://apis.io/providers/oyster-hr/
+context: payroll
+generated: '2026-11-10'
+concepts:
+  pay_run:
+    path_segment:
+    - payroll
+    properties:
+      status: state
+      currency: currencyCode
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/oyster-hr-endpoints-openapi.yml#GET /v1/payroll
+    - openapi/_original/oyster-hr-endpoints-openapi.yml#GET /v1/payroll/{id}
+  pay_stub:
+    path_segment:
+    - payslips
+    properties:
+      id: id
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/oyster-hr-endpoints-openapi.yml#GET /v1/engagements/{id}/payslips

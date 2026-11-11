@@ -1,0 +1,166 @@
+openapi: 3.1.0
+info:
+  title: Payroll (API Commons)
+  version: 0.1.0-draft.20261110
+  description: 'The common Payroll interface, distilled from the harvested OpenAPI of 192 providers in the APIs.io
+    catalog. Not a product: no one serves this API. It is the shape the market already shares, measured, so that
+    providers, agents and integrators can map to one vocabulary. See profile.yml.'
+  license:
+    name: CC BY-NC-SA 4.0
+    url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+paths:
+  /pay-runs:
+    get:
+      operationId: listPayRuns
+      summary: List pay runs
+      tags:
+      - Pay Runs
+      x-commons-tier: core
+      x-commons-share: 0.812
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id001
+                  $ref: '#/components/schemas/PayRun'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createPayRun
+      summary: Create a pay run
+      tags:
+      - Pay Runs
+      x-commons-tier: core
+      x-commons-share: 0.562
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id001
+  /pay-runs/{pay_run_id}:
+    parameters:
+    - $ref: '#/components/parameters/pay_run_id'
+    get:
+      operationId: getPayRun
+      summary: Get a pay run
+      tags:
+      - Pay Runs
+      x-commons-tier: core
+      x-commons-share: 0.688
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+  /pay-stubs:
+    get:
+      operationId: listPayStubs
+      summary: List pay stubs
+      tags:
+      - Pay Stubs
+      x-commons-tier: core
+      x-commons-share: 0.889
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id002
+                  $ref: '#/components/schemas/PayStub'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+  /pay-stubs/{pay_stub_id}:
+    parameters:
+    - $ref: '#/components/parameters/pay_stub_id'
+    get:
+      operationId: getPayStub
+      summary: Get a pay stub
+      tags:
+      - Pay Stubs
+      x-commons-tier: core
+      x-commons-share: 0.611
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+  /pay-schedules:
+    get:
+      operationId: listPaySchedules
+      summary: List pay schedules
+      tags:
+      - Pay Schedules
+      x-commons-tier: core
+      x-commons-share: 1.0
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PaySchedule'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+components:
+  schemas:
+    PayRun:
+      $ref: ./schema/pay_run.json
+    PayStub:
+      $ref: ./schema/pay_stub.json
+    PaySchedule:
+      $ref: ./schema/pay_schedule.json
+  parameters:
+    pay_run_id:
+      name: pay_run_id
+      in: path
+      required: true
+      schema:
+        type: string
+    pay_stub_id:
+      name: pay_stub_id
+      in: path
+      required: true
+      schema:
+        type: string
+    pay_schedule_id:
+      name: pay_schedule_id
+      in: path
+      required: true
+      schema:
+        type: string

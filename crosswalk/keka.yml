@@ -1,0 +1,13 @@
+provider: keka
+apis_io: https://apis.io/providers/keka/
+context: payroll
+generated: '2026-11-10'
+concepts:
+  pay_stub:
+    path_segment:
+    - payments
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/keka-hr-api-openapi.yaml#GET /api/v1/payroll/paygroups/{payGroupId}/paycycles/{payCycleId}/paybatches/{payBatchId}/payments
+    - openapi/_original/keka-hr-api-openapi.yaml#PUT /api/v1/payroll/paygroups/{payGroupId}/paycycles/{payCycleId}/paybatches/{payBatchId}/payments

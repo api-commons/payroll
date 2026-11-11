@@ -1,0 +1,203 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/payroll/main/schema/pay_stub.json",
+  "title": "Pay Stub",
+  "description": "The common pay_stub in Payroll, distilled from 15 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.8,
+      "x-commons-providers": 12,
+      "x-commons-spellings": [
+        "id",
+        "remote_id",
+        "Id"
+      ]
+    },
+    "gross_pay": {
+      "type": "number",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.533,
+      "x-commons-providers": 8,
+      "x-commons-spellings": [
+        "gross_pay",
+        "grossEarnings",
+        "grossPay",
+        "gross",
+        "gross_amount"
+      ]
+    },
+    "net_pay": {
+      "type": "number",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.533,
+      "x-commons-providers": 8,
+      "x-commons-spellings": [
+        "netPay",
+        "net_pay",
+        "net",
+        "net_amount",
+        "NetPay"
+      ]
+    },
+    "employee_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.467,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "employeeId",
+        "worker_id",
+        "employee",
+        "EmployeeId",
+        "worker",
+        "EmployeeID",
+        "employeeID"
+      ]
+    },
+    "period_end": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.467,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "period_end",
+        "payPeriodEnd",
+        "pay_period_end",
+        "endDate"
+      ]
+    },
+    "period_start": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.467,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "startDate",
+        "period_start",
+        "payPeriodStart",
+        "pay_period_start"
+      ]
+    },
+    "currency": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.4,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "currency"
+      ]
+    },
+    "deductions": {
+      "type": "array",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.4,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "deductions",
+        "Deductions",
+        "DeductionLines",
+        "deductionLines"
+      ]
+    },
+    "earnings": {
+      "type": "array",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.333,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "earnings",
+        "earningsLines",
+        "Wages",
+        "EarningsLines"
+      ]
+    },
+    "pay_run_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.333,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "payroll_id",
+        "pay_run",
+        "payRunId",
+        "payRunID"
+      ]
+    },
+    "pay_date": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.267,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "pay_date",
+        "payment_date",
+        "paymentDate",
+        "payDate"
+      ]
+    },
+    "taxes": {
+      "type": "array",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.267,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "taxes",
+        "TaxLines"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.2,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "created_at"
+      ],
+      "format": "date-time"
+    },
+    "metadata": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.2,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "metadata",
+        "attributes",
+        "custom_fields"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.2,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "status"
+      ]
+    },
+    "total_deductions": {
+      "type": "number",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.2,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "totalDeductions",
+        "total_deductions"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "payroll",
+    "concept": "pay_stub",
+    "providers": 15,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

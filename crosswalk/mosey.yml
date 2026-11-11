@@ -1,0 +1,12 @@
+provider: mosey
+apis_io: https://apis.io/providers/mosey/
+context: payroll
+generated: '2026-11-10'
+concepts:
+  pay_run:
+    path_segment:
+    - payroll
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/mosey-openapi_v2.json#POST /v2/auth/payroll

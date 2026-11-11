@@ -1,0 +1,13 @@
+provider: payfit
+apis_io: https://apis.io/providers/payfit/
+context: payroll
+generated: '2026-11-10'
+concepts:
+  pay_stub:
+    path_segment:
+    - payslips
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/payfit-openapi.yml#GET /collaborators/{id}/payslips
+    - openapi/_original/payfit-openapi.yml#GET /collaborators/{id}/payslips/{payslipId}

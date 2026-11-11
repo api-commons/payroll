@@ -1,0 +1,17 @@
+provider: when-i-work
+apis_io: https://apis.io/providers/when-i-work/
+context: payroll
+generated: '2026-11-10'
+concepts:
+  pay_run:
+    path_segment:
+    - payrolls
+    properties:
+      id: id
+      period_end: end_date
+      period_start: start_date
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/when-i-work-openapi.yml#GET /2/payrolls
+    - openapi/_original/when-i-work-openapi.yml#GET /2/payrolls/{id}
+    - openapi/_original/when-i-work-openapi.yml#PUT /2/payrolls/{id}

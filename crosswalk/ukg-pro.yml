@@ -1,0 +1,17 @@
+provider: ukg-pro
+apis_io: https://apis.io/providers/ukg-pro/
+context: payroll
+generated: '2026-11-10'
+concepts:
+  pay_stub:
+    path_segment:
+    - pay-statements
+    properties:
+      gross_pay: grossPay
+      net_pay: netPay
+      employee_id: employeeId
+      period_end: payPeriodEnd
+      period_start: payPeriodStart
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/ukg-pro-openapi.yml#GET /pay/v1/pay-statements

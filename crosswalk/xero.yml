@@ -1,0 +1,53 @@
+provider: xero
+apis_io: https://apis.io/providers/xero/
+context: payroll
+generated: '2026-11-10'
+concepts:
+  pay_run:
+    path_segment:
+    - payruns
+    properties:
+      id:
+      - PayRunID
+      - payRunID
+      pay_date:
+      - PaymentDate
+      - paymentDate
+      period_end: periodEndDate
+      period_start: periodStartDate
+      net_pay: NetPay
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/xero-payroll-au-openapi.yml#GET /PayRuns
+    - openapi/_original/xero-payroll-au-openapi.yml#GET /PayRuns/{PayRunID}
+    - openapi/_original/xero-payroll-au-openapi.yml#POST /PayRuns
+    - openapi/_original/xero-payroll-au-openapi.yml#POST /PayRuns/{PayRunID}
+    - openapi/_original/xero-payroll-nz-openapi.yml#GET /PayRuns
+  pay_stub:
+    path_segment:
+    - payslips
+    - payslip
+    properties:
+      gross_pay: grossEarnings
+      net_pay: NetPay
+      employee_id:
+      - EmployeeID
+      - employeeID
+      deductions:
+      - Deductions
+      - DeductionLines
+      - deductionLines
+      earnings:
+      - Wages
+      - EarningsLines
+      - earningsLines
+      pay_run_id: payRunID
+      taxes: TaxLines
+      total_deductions: totalDeductions
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/xero-payroll-au-openapi.yml#GET /Payslip/{PayslipID}
+    - openapi/_original/xero-payroll-au-openapi.yml#POST /Payslip/{PayslipID}
+    - openapi/_original/xero-payroll-nz-openapi.yml#GET /PaySlips
+    - openapi/_original/xero-payroll-nz-openapi.yml#GET /PaySlips/{PaySlipID}
+    - openapi/_original/xero-payroll-nz-openapi.yml#PUT /PaySlips/{PaySlipID}

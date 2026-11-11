@@ -1,0 +1,15 @@
+provider: dailypay
+apis_io: https://apis.io/providers/dailypay/
+context: payroll
+generated: '2026-11-10'
+concepts:
+  pay_stub:
+    path_segment:
+    - paychecks
+    properties:
+      id: id
+      metadata: attributes
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/dailypay-rest-openapi-original.yml#GET /rest/paychecks
+    - openapi/_original/dailypay-rest-openapi-original.yml#GET /rest/paychecks/{paycheck_id}

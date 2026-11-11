@@ -1,0 +1,498 @@
+context: payroll
+name: Payroll
+generated: '2026-11-10'
+version: 0.1.0-draft.20261110
+status: draft
+cohort:
+  tags:
+  - Payroll
+  - Global Payroll
+  - Employer of Record
+  - EOR
+  - Payroll Processing
+  - Human Resources
+  - HRIS
+  - HR Tech
+  - HCM
+  - Workforce Management
+  providers_with_harvested_openapi: 192
+thresholds:
+  core: 0.5
+  extended: 0.2
+  min_providers: 3
+excluded: {}
+duplicates:
+  ethena:
+  - goethena
+  argyle:
+  - argyle9a25
+  smarthr:
+  - kufu
+  remote:
+  - remote-com
+  thatch:
+  - thatch-health
+  workday:
+  - workday-advanced-compensation
+  - workday-integration
+  - workday-payroll
+  - workday-recruiting
+  adp:
+  - automatic-data-processing
+shared_specs: {}
+concepts:
+  pay_run:
+    segments_seen:
+      payrolls: 6
+      payroll: 5
+      payroll-runs: 3
+      payruns: 2
+      pay-runs: 1
+      payrollruns: 1
+    providers_exposing: 16
+    providers_with_readable_schema: 15
+    operations:
+    - operation: GET collection
+      providers: 13
+      share: 0.812
+      tier: core
+    - operation: GET item
+      providers: 11
+      share: 0.688
+      tier: core
+    - operation: POST collection
+      providers: 9
+      share: 0.562
+      tier: core
+    - operation: DELETE item
+      providers: 3
+      share: 0.188
+      tier: long-tail
+    - operation: UPDATE item
+      providers: 3
+      share: 0.188
+      tier: long-tail
+    - operation: POST item
+      providers: 1
+      share: 0.062
+      tier: long-tail
+    properties:
+    - name: id
+      tier: core
+      providers: 10
+      share: 0.667
+      type: string
+      spellings:
+      - id
+      - remote_id
+      - PayRunID
+      - payRunID
+    - name: pay_date
+      tier: extended
+      providers: 7
+      share: 0.467
+      type: string
+      spellings:
+      - paymentDate
+      - check_date
+      - pay_date
+      - paid_at
+      - checkDate
+      - payDate
+      - PaymentDate
+    - name: period_end
+      tier: extended
+      providers: 6
+      share: 0.4
+      type: string
+      spellings:
+      - end_date
+      - period_end
+      - payPeriodEnd
+      - periodEndDate
+    - name: period_start
+      tier: extended
+      providers: 6
+      share: 0.4
+      type: string
+      spellings:
+      - start_date
+      - period_start
+      - payPeriodStart
+      - periodStartDate
+    - name: status
+      tier: extended
+      providers: 6
+      share: 0.4
+      type: string
+      spellings:
+      - status
+      - state
+    - name: currency
+      tier: extended
+      providers: 4
+      share: 0.267
+      type: string
+      spellings:
+      - currency
+      - currencyCode
+      - currency_code
+    - name: net_pay
+      tier: extended
+      providers: 4
+      share: 0.267
+      type: integer
+      spellings:
+      - net
+      - net_pay
+      - netPay
+      - NetPay
+    - name: pay_period
+      tier: extended
+      providers: 3
+      share: 0.2
+      type: object
+      spellings:
+      - payPeriod
+    - name: type
+      tier: extended
+      providers: 3
+      share: 0.2
+      type: string
+      spellings:
+      - type
+      - run_type
+    long_tail_count: 122
+    long_tail_sample:
+    - account_id
+    - company_debit
+    - created_at
+    - deductions
+    - employee_taxes
+    - employer_taxes
+    - gross_pay
+    - legal_entity_id
+    - metadata
+    - pay_schedule_id
+    - payroll_id
+    - tax
+    - updated_at
+    - allowances
+    - approval_date
+    - authorization_callback_url
+    - benefits_total
+    - bonus
+    - calendar_type
+    - changed_at
+    - closed_at
+    - code_id
+    - completed_on
+    - contractor_compensations
+    - country
+    - creator_id
+    - cutoff_date
+    - cutoff_time_for_payroll
+    - debit
+    - debit_date
+    - deferred_payroll_taxes
+    - depot_id
+    - descriptor
+    - employee_benefits_deductions
+    - employee_compensations
+    - employee_details
+    - employee_id
+    - employer_benefits
+    - employer_contributions
+    - employer_contributions_total
+  pay_stub:
+    segments_seen:
+      payslips: 11
+      paystubs: 4
+      payslip: 2
+      payments: 2
+      paychecks: 1
+      paystatements: 1
+      pay-statements: 1
+    providers_exposing: 18
+    providers_with_readable_schema: 15
+    operations:
+    - operation: GET collection
+      providers: 16
+      share: 0.889
+      tier: core
+    - operation: GET item
+      providers: 11
+      share: 0.611
+      tier: core
+    - operation: POST collection
+      providers: 3
+      share: 0.167
+      tier: long-tail
+    - operation: DELETE item
+      providers: 1
+      share: 0.056
+      tier: long-tail
+    - operation: POST item
+      providers: 1
+      share: 0.056
+      tier: long-tail
+    - operation: UPDATE collection
+      providers: 1
+      share: 0.056
+      tier: long-tail
+    - operation: UPDATE item
+      providers: 1
+      share: 0.056
+      tier: long-tail
+    properties:
+    - name: id
+      tier: core
+      providers: 12
+      share: 0.8
+      type: string
+      spellings:
+      - id
+      - remote_id
+      - Id
+    - name: gross_pay
+      tier: core
+      providers: 8
+      share: 0.533
+      type: number
+      spellings:
+      - gross_pay
+      - grossEarnings
+      - grossPay
+      - gross
+      - gross_amount
+    - name: net_pay
+      tier: core
+      providers: 8
+      share: 0.533
+      type: number
+      spellings:
+      - netPay
+      - net_pay
+      - net
+      - net_amount
+      - NetPay
+    - name: employee_id
+      tier: extended
+      providers: 7
+      share: 0.467
+      type: string
+      spellings:
+      - employeeId
+      - worker_id
+      - employee
+      - EmployeeId
+      - worker
+      - EmployeeID
+      - employeeID
+    - name: period_end
+      tier: extended
+      providers: 7
+      share: 0.467
+      type: string
+      spellings:
+      - period_end
+      - payPeriodEnd
+      - pay_period_end
+      - endDate
+    - name: period_start
+      tier: extended
+      providers: 7
+      share: 0.467
+      type: string
+      spellings:
+      - startDate
+      - period_start
+      - payPeriodStart
+      - pay_period_start
+    - name: currency
+      tier: extended
+      providers: 6
+      share: 0.4
+      type: string
+      spellings:
+      - currency
+    - name: deductions
+      tier: extended
+      providers: 6
+      share: 0.4
+      type: array
+      spellings:
+      - deductions
+      - Deductions
+      - DeductionLines
+      - deductionLines
+    - name: earnings
+      tier: extended
+      providers: 5
+      share: 0.333
+      type: array
+      spellings:
+      - earnings
+      - earningsLines
+      - Wages
+      - EarningsLines
+    - name: pay_run_id
+      tier: extended
+      providers: 5
+      share: 0.333
+      type: string
+      spellings:
+      - payroll_id
+      - pay_run
+      - payRunId
+      - payRunID
+    - name: pay_date
+      tier: extended
+      providers: 4
+      share: 0.267
+      type: string
+      spellings:
+      - pay_date
+      - payment_date
+      - paymentDate
+      - payDate
+    - name: taxes
+      tier: extended
+      providers: 4
+      share: 0.267
+      type: array
+      spellings:
+      - taxes
+      - TaxLines
+    - name: created_at
+      tier: extended
+      providers: 3
+      share: 0.2
+      type: string
+      spellings:
+      - created_at
+    - name: metadata
+      tier: extended
+      providers: 3
+      share: 0.2
+      type: object
+      spellings:
+      - metadata
+      - attributes
+      - custom_fields
+    - name: status
+      tier: extended
+      providers: 3
+      share: 0.2
+      type: string
+      spellings:
+      - status
+    - name: total_deductions
+      tier: extended
+      providers: 3
+      share: 0.2
+      type: number
+      spellings:
+      - totalDeductions
+      - total_deductions
+    long_tail_count: 260
+    long_tail_sample:
+    - employee_external_id
+    - gross_pay_ytd
+    - net_pay_ytd
+    - pay_group
+    - payment_method
+    - reimbursements
+    - total_earnings
+    - total_reimbursements
+    - total_taxes
+    - type
+    - updated_at
+    - abn
+    - account
+    - account_id
+    - accrued_leave
+    - allowances
+    - alphabetise_pay_categories
+    - amount
+    - attendances
+    - bacs_hash
+    - bank_account
+    - bank_payments
+    - base_pay_rate
+    - base_rate
+    - benefits_in_kind_adjustments
+    - business_address
+    - business_name
+    - changed_at
+    - check_amount
+    - check_number
+    - clearance_tax_amount_ytd
+    - company
+    - company_id
+    - contact_name
+    - content_type
+    - cpf_adjustments
+    - cpf_employee_contribution_ytd
+    - cpf_employer_contribution_ytd
+    - created_utc
+    - crew_id
+  pay_schedule:
+    segments_seen:
+      pay-groups: 2
+      pay_schedules: 1
+      paygroups: 1
+    providers_exposing: 4
+    providers_with_readable_schema: 3
+    operations:
+    - operation: GET collection
+      providers: 4
+      share: 1.0
+      tier: core
+    - operation: GET item
+      providers: 2
+      share: 0.5
+      tier: long-tail
+    - operation: POST collection
+      providers: 1
+      share: 0.25
+      tier: long-tail
+    - operation: UPDATE item
+      providers: 1
+      share: 0.25
+      tier: long-tail
+    properties:
+    - name: id
+      tier: core
+      providers: 3
+      share: 1.0
+      type: string
+      spellings:
+      - id
+      - remote_id
+    - name: name
+      tier: core
+      providers: 3
+      share: 1.0
+      type: string
+      spellings:
+      - name
+    long_tail_count: 17
+    long_tail_sample:
+    - changed_at
+    - country
+    - currency
+    - description
+    - descriptor
+    - frequency
+    - inactive
+    - is_active
+    - members
+    - metadata
+    - pay_group_name
+    - raw_data
+    - remote_data
+    - remote_deleted_at
+    - run_category
+    - updated_at
+    - worker_count

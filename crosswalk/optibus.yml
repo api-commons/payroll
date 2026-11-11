@@ -1,0 +1,12 @@
+provider: optibus
+apis_io: https://apis.io/providers/optibus/
+context: payroll
+generated: '2026-11-10'
+concepts:
+  pay_run:
+    path_segment:
+    - payroll
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/optibus-operations-openapi.yml#GET /v2/payroll

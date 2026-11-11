@@ -1,0 +1,12 @@
+provider: paylocity
+apis_io: https://apis.io/providers/paylocity/
+context: payroll
+generated: '2026-11-10'
+concepts:
+  pay_stub:
+    path_segment:
+    - paystatements
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/paylocity-openapi.yml#GET /apihub/payrollhistory/v1/companies/{companyId}/employees/{employeeId}/paystatements

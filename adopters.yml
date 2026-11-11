@@ -1,0 +1,149 @@
+context: payroll
+generated: '2026-11-10'
+adopters:
+- provider: argyle
+  apis_io: https://apis.io/providers/argyle/
+  crosswalk: crosswalk/argyle.yml
+  concepts:
+  - pay_stub
+- provider: bindbee
+  apis_io: https://apis.io/providers/bindbee/
+  crosswalk: crosswalk/bindbee.yml
+  concepts:
+  - pay_run
+  - pay_schedule
+- provider: cadana
+  apis_io: https://apis.io/providers/cadana/
+  crosswalk: crosswalk/cadana.yml
+  concepts:
+  - pay_run
+- provider: connecteam
+  apis_io: https://apis.io/providers/connecteam/
+  crosswalk: crosswalk/connecteam.yml
+  concepts:
+  - pay_stub
+- provider: dailypay
+  apis_io: https://apis.io/providers/dailypay/
+  crosswalk: crosswalk/dailypay.yml
+  concepts:
+  - pay_stub
+- provider: deel-com
+  apis_io: https://apis.io/providers/deel-com/
+  crosswalk: crosswalk/deel-com.yml
+  concepts:
+  - pay_stub
+- provider: employment-hero
+  apis_io: https://apis.io/providers/employment-hero/
+  crosswalk: crosswalk/employment-hero.yml
+  concepts:
+  - pay_stub
+- provider: gusto
+  apis_io: https://apis.io/providers/gusto/
+  crosswalk: crosswalk/gusto.yml
+  concepts:
+  - pay_run
+  - pay_schedule
+- provider: justworks
+  apis_io: https://apis.io/providers/justworks/
+  crosswalk: crosswalk/justworks.yml
+  concepts:
+  - pay_run
+  - pay_stub
+- provider: keka
+  apis_io: https://apis.io/providers/keka/
+  crosswalk: crosswalk/keka.yml
+  concepts:
+  - pay_stub
+- provider: kombo
+  apis_io: https://apis.io/providers/kombo/
+  crosswalk: crosswalk/kombo.yml
+  concepts:
+  - pay_run
+  - pay_schedule
+  - pay_stub
+- provider: mosey
+  apis_io: https://apis.io/providers/mosey/
+  crosswalk: crosswalk/mosey.yml
+  concepts:
+  - pay_run
+- provider: optibus
+  apis_io: https://apis.io/providers/optibus/
+  crosswalk: crosswalk/optibus.yml
+  concepts:
+  - pay_run
+- provider: oyster-hr
+  apis_io: https://apis.io/providers/oyster-hr/
+  crosswalk: crosswalk/oyster-hr.yml
+  concepts:
+  - pay_run
+  - pay_stub
+- provider: payfit
+  apis_io: https://apis.io/providers/payfit/
+  crosswalk: crosswalk/payfit.yml
+  concepts:
+  - pay_stub
+- provider: paylocity
+  apis_io: https://apis.io/providers/paylocity/
+  crosswalk: crosswalk/paylocity.yml
+  concepts:
+  - pay_stub
+- provider: pinwheel
+  apis_io: https://apis.io/providers/pinwheel/
+  crosswalk: crosswalk/pinwheel.yml
+  concepts:
+  - pay_stub
+- provider: puzzle
+  apis_io: https://apis.io/providers/puzzle/
+  crosswalk: crosswalk/puzzle.yml
+  concepts:
+  - pay_run
+- provider: remote
+  apis_io: https://apis.io/providers/remote/
+  crosswalk: crosswalk/remote.yml
+  concepts:
+  - pay_run
+  - pay_stub
+- provider: salsa
+  apis_io: https://apis.io/providers/salsa/
+  crosswalk: crosswalk/salsa.yml
+  concepts:
+  - pay_run
+- provider: smarthr
+  apis_io: https://apis.io/providers/smarthr/
+  crosswalk: crosswalk/smarthr.yml
+  concepts:
+  - pay_run
+  - pay_stub
+- provider: ukg-pro
+  apis_io: https://apis.io/providers/ukg-pro/
+  crosswalk: crosswalk/ukg-pro.yml
+  concepts:
+  - pay_stub
+- provider: visma
+  apis_io: https://apis.io/providers/visma/
+  crosswalk: crosswalk/visma.yml
+  concepts:
+  - pay_stub
+- provider: when-i-work
+  apis_io: https://apis.io/providers/when-i-work/
+  crosswalk: crosswalk/when-i-work.yml
+  concepts:
+  - pay_run
+- provider: wingspan
+  apis_io: https://apis.io/providers/wingspan/
+  crosswalk: crosswalk/wingspan.yml
+  concepts:
+  - pay_run
+- provider: workday
+  apis_io: https://apis.io/providers/workday/
+  crosswalk: crosswalk/workday.yml
+  concepts:
+  - pay_run
+  - pay_schedule
+  - pay_stub
+- provider: xero
+  apis_io: https://apis.io/providers/xero/
+  crosswalk: crosswalk/xero.yml
+  concepts:
+  - pay_run
+  - pay_stub

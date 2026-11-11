@@ -1,0 +1,24 @@
+provider: pinwheel
+apis_io: https://apis.io/providers/pinwheel/
+context: payroll
+generated: '2026-11-10'
+concepts:
+  pay_stub:
+    path_segment:
+    - paystubs
+    properties:
+      id: id
+      period_end: pay_period_end
+      period_start: pay_period_start
+      currency: currency
+      deductions: deductions
+      earnings: earnings
+      pay_date: pay_date
+      taxes: taxes
+      created_at: created_at
+      total_deductions: total_deductions
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/pinwheel-pinwheel-api-openapi.yml#GET /accounts/{account_id}/paystubs
+    - openapi/_original/pinwheel-pinwheel-api-openapi.yml#GET /accounts/{account_id}/paystubs/{paystub_id}
+    - openapi/_original/pinwheel-pinwheel-api-openapi.yml#GET /company_connections/{company_connection_id}/paystubs/{employee_external_id}

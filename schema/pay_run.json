@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/payroll/main/schema/pay_run.json",
+  "title": "Pay Run",
+  "description": "The common pay_run in Payroll, distilled from 15 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.667,
+      "x-commons-providers": 10,
+      "x-commons-spellings": [
+        "id",
+        "remote_id",
+        "PayRunID",
+        "payRunID"
+      ]
+    },
+    "pay_date": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.467,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "paymentDate",
+        "check_date",
+        "pay_date",
+        "paid_at",
+        "checkDate",
+        "payDate",
+        "PaymentDate"
+      ]
+    },
+    "period_end": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.4,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "end_date",
+        "period_end",
+        "payPeriodEnd",
+        "periodEndDate"
+      ]
+    },
+    "period_start": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.4,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "start_date",
+        "period_start",
+        "payPeriodStart",
+        "periodStartDate"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.4,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "status",
+        "state"
+      ]
+    },
+    "currency": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.267,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "currency",
+        "currencyCode",
+        "currency_code"
+      ]
+    },
+    "net_pay": {
+      "type": "integer",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.267,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "net",
+        "net_pay",
+        "netPay",
+        "NetPay"
+      ]
+    },
+    "pay_period": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.2,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "payPeriod"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.2,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "type",
+        "run_type"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "payroll",
+    "concept": "pay_run",
+    "providers": 15,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

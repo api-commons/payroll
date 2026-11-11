@@ -1,0 +1,3248 @@
+{
+ "cohort_size": 192,
+ "unreadable": [],
+ "concepts": {
+  "pay_run": {
+   "bindbee": {
+    "segments": [
+     "payroll-runs"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "remote_id": null,
+     "modified_at": "string",
+     "raw_data": null,
+     "custom_fields": null,
+     "pay_group": null,
+     "run_state": null,
+     "run_type": null,
+     "start_date": null,
+     "end_date": null,
+     "check_date": null,
+     "payroll_run_calendar": null
+    },
+    "evidence": [
+     "openapi/_original/bindbee-openapi.json#GET /api/hris/v1/payroll-runs",
+     "openapi/_original/bindbee-openapi.json#GET /api/hris/v1/payroll-runs/{id}"
+    ]
+   },
+   "cadana": {
+    "segments": [
+     "payrolls"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "payrollId": "string",
+     "workerType": "string",
+     "status": null,
+     "numPeople": "integer",
+     "type": "string",
+     "payrollDate": "string",
+     "debit": null,
+     "gross": null,
+     "net": null,
+     "tax": null,
+     "pension": null,
+     "statutoryDeductions": null,
+     "employerContributions": null,
+     "payPeriod": null,
+     "tags": "object",
+     "entryId": null,
+     "personId": "string",
+     "transactionIds": "array",
+     "salary": "object",
+     "bonus": "object",
+     "allowances": "array",
+     "deductions": "array",
+     "metadata": "object"
+    },
+    "evidence": [
+     "openapi/_original/cadana-workforce-management-openapi.yaml#DELETE /v1/payrolls/{payrollId}",
+     "openapi/_original/cadana-workforce-management-openapi.yaml#GET /v1/payrolls",
+     "openapi/_original/cadana-workforce-management-openapi.yaml#GET /v1/payrolls/{payrollId}",
+     "openapi/_original/cadana-workforce-management-openapi.yaml#POST /v1/payrolls"
+    ]
+   },
+   "gusto": {
+    "segments": [
+     "payrolls"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/gusto-openapi.yml#GET /v1/companies/{company_id}/payrolls",
+     "openapi/_original/gusto-openapi.yml#POST /v1/companies/{company_id}/payrolls"
+    ]
+   },
+   "justworks": {
+    "segments": [
+     "payrolls"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "string",
+     "company_debit": "integer",
+     "employee_taxes": "integer",
+     "employer_taxes": "integer",
+     "gross_pay": "integer",
+     "net_pay": "integer",
+     "currency": "string",
+     "debit_date": "string",
+     "pay_date": "string",
+     "payment_method": "string"
+    },
+    "evidence": [
+     "openapi/_original/justworks-payroll-api-openapi.yml#GET /v1/payrolls"
+    ]
+   },
+   "kombo": {
+    "segments": [
+     "pay-runs",
+     "payroll"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "remote_id": "string",
+     "start_date": [
+      "string",
+      "null"
+     ],
+     "end_date": [
+      "string",
+      "null"
+     ],
+     "legal_entity_id": [
+      "string",
+      "null"
+     ],
+     "changed_at": "string",
+     "remote_deleted_at": [
+      "string",
+      "null"
+     ],
+     "remote_data": [
+      "object",
+      "null"
+     ],
+     "totals": "object",
+     "files": "array",
+     "payroll_month": "string"
+    },
+    "evidence": [
+     "openapi/_original/kombo-openapi.json#GET /hris/pay-runs",
+     "openapi/_original/kombo-openapi.json#POST /custom/datev/push-data/payroll"
+    ]
+   },
+   "kufu": {
+    "segments": [
+     "payrolls"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "payment_type": "string",
+     "paid_at": "string",
+     "period_start_at": "string",
+     "period_end_at": "string",
+     "source_type": "string",
+     "status": "string",
+     "published_at": "string",
+     "notify_with_publish": "boolean",
+     "numeral_system_handle_type": "string",
+     "name_for_admin": "string",
+     "name_for_crew": "string"
+    },
+    "evidence": [
+     "openapi/_original/kufu-smarthr-openapi.json#DELETE /v1/payrolls/{id}",
+     "openapi/_original/kufu-smarthr-openapi.json#GET /v1/payrolls",
+     "openapi/_original/kufu-smarthr-openapi.json#GET /v1/payrolls/{id}",
+     "openapi/_original/kufu-smarthr-openapi.json#PATCH /v1/payrolls/{id}",
+     "openapi/_original/kufu-smarthr-openapi.json#POST /v1/payrolls"
+    ]
+   },
+   "mosey": {
+    "segments": [
+     "payroll"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "url": "string",
+     "legal_entity_id": "string",
+     "authorization_callback_url": "string"
+    },
+    "evidence": [
+     "openapi/_original/mosey-openapi_v2.json#POST /v2/auth/payroll"
+    ]
+   },
+   "optibus": {
+    "segments": [
+     "payroll"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "occurrenceDates": "object",
+     "result": "object",
+     "periodType": null,
+     "workEntityIdReference": "string",
+     "codeId": "string",
+     "workingDriver": "object",
+     "depotId": "string"
+    },
+    "evidence": [
+     "openapi/_original/optibus-operations-openapi.yml#GET /v2/payroll"
+    ]
+   },
+   "oyster-hr": {
+    "segments": [
+     "payroll"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "payrollId": "string",
+     "currencyCode": "string",
+     "cutoffTimeForPayroll": "string",
+     "state": "string",
+     "payrollRecordsCount": "integer"
+    },
+    "evidence": [
+     "openapi/_original/oyster-hr-endpoints-openapi.yml#GET /v1/payroll",
+     "openapi/_original/oyster-hr-endpoints-openapi.yml#GET /v1/payroll/{id}"
+    ]
+   },
+   "puzzle": {
+    "segments": [
+     "payrolls"
+    ],
+    "operations": [
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "accountId": "string",
+     "nativeId": "string",
+     "payPeriod": "object",
+     "withdrawalDate": "string",
+     "checkDate": "string",
+     "companyDebit": "object",
+     "transactionAmounts": "array",
+     "netPay": "object",
+     "reimbursements": "object",
+     "employerTaxes": "object",
+     "employeeTaxes": "object",
+     "employerBenefits": "object",
+     "employeeBenefitsDeductions": "object",
+     "deferredPayrollTaxes": "object",
+     "payrollFees": "object",
+     "isOffCycle": "boolean",
+     "employeeCompensations": "array",
+     "contractorCompensations": "array"
+    },
+    "evidence": [
+     "openapi/_original/puzzle-openapi-original.json#GET /company/{id}/payrolls/{payrollId}",
+     "openapi/_original/puzzle-openapi-original.json#POST /company/{id}/payrolls"
+    ]
+   },
+   "remote": {
+    "segments": [
+     "payroll-runs"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "approval_date": "string",
+     "benefits_total": "integer",
+     "country": "object",
+     "currency_code": "string",
+     "cutoff_date": "string",
+     "employee_details": "array",
+     "employer_contributions_total": "integer",
+     "expected_payout_date": "string",
+     "expenses_total": "integer",
+     "id": "string",
+     "incentives_total": "integer",
+     "other_total": "integer",
+     "period_end": "string",
+     "period_start": "string",
+     "salary_total": "integer",
+     "status": "string",
+     "total_payroll_cost": "integer",
+     "type": "string"
+    },
+    "evidence": [
+     "openapi/_original/remote-openapi-original.json#GET /v1/payroll-runs",
+     "openapi/_original/remote-openapi-original.json#GET /v1/payroll-runs/{payroll_run_id}"
+    ]
+   },
+   "salsa": {
+    "segments": [
+     "payroll-runs"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "employerId": "string",
+     "workerPayGroupId": "string",
+     "payPeriodStart": "string",
+     "payPeriodEnd": "string",
+     "payDate": "string",
+     "status": "string"
+    },
+    "evidence": [
+     "openapi/_original/salsa-openapi.yml#DELETE /employers/{employerId}/payroll-runs/{payrollRunId}",
+     "openapi/_original/salsa-openapi.yml#GET /employers/{employerId}/payroll-runs",
+     "openapi/_original/salsa-openapi.yml#GET /employers/{employerId}/payroll-runs/{payrollRunId}",
+     "openapi/_original/salsa-openapi.yml#POST /employers/{employerId}/payroll-runs"
+    ]
+   },
+   "smarthr": {
+    "segments": [
+     "payrolls"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "payment_type": "string",
+     "paid_at": "string",
+     "period_start_at": "string",
+     "period_end_at": "string",
+     "source_type": "string",
+     "status": "string",
+     "published_at": "string",
+     "notify_with_publish": "boolean",
+     "numeral_system_handle_type": "string",
+     "name_for_admin": "string",
+     "name_for_crew": "string"
+    },
+    "evidence": [
+     "openapi/_original/kufu-default-api-openapi.yml#DELETE /v1/payrolls/{id}",
+     "openapi/_original/kufu-default-api-openapi.yml#GET /v1/payrolls",
+     "openapi/_original/kufu-default-api-openapi.yml#GET /v1/payrolls/{id}",
+     "openapi/_original/kufu-default-api-openapi.yml#PATCH /v1/payrolls/{id}",
+     "openapi/_original/kufu-default-api-openapi.yml#POST /v1/payrolls"
+    ]
+   },
+   "when-i-work": {
+    "segments": [
+     "payrolls"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "integer",
+     "account_id": "integer",
+     "creator_id": "integer",
+     "start_date": "string",
+     "end_date": "string",
+     "offset": "string",
+     "notes": "string",
+     "is_edited": "boolean",
+     "is_closed": "boolean",
+     "closed_at": "string",
+     "is_finalized": "boolean",
+     "finalized_at": "string",
+     "created_at": "string",
+     "updated_at": "string",
+     "payroll": "object",
+     "payrollhours": "array"
+    },
+    "evidence": [
+     "openapi/_original/when-i-work-openapi.yml#GET /2/payrolls",
+     "openapi/_original/when-i-work-openapi.yml#GET /2/payrolls/{id}",
+     "openapi/_original/when-i-work-openapi.yml#PUT /2/payrolls/{id}"
+    ]
+   },
+   "wingspan": {
+    "segments": [
+     "payroll"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "invoices": "array",
+     "parentInvoice": "object"
+    },
+    "evidence": [
+     "openapi/_original/wingspan-payments-openapi-original.yml#GET /payments/reports/payroll/{payrollId}"
+    ]
+   },
+   "workday-integration": {
+    "segments": [
+     "payrollruns"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "descriptor": "string",
+     "href": "string"
+    },
+    "evidence": [
+     "openapi/_original/workday-integration-payroll-aus-openapi.yml#GET /payrollRuns",
+     "openapi/_original/workday-integration-payroll-aus-openapi.yml#GET /payrollRuns/{ID}",
+     "openapi/_original/workday-integration-payroll-can-openapi.yml#GET /payrollRuns",
+     "openapi/_original/workday-integration-payroll-can-openapi.yml#GET /payrollRuns/{ID}",
+     "openapi/_original/workday-integration-payroll-fra-openapi.yml#GET /payrollRuns",
+     "openapi/_original/workday-integration-payroll-fra-openapi.yml#GET /payrollRuns/{ID}",
+     "openapi/_original/workday-integration-payroll-gbr-openapi.yml#GET /payrollRuns",
+     "openapi/_original/workday-integration-payroll-gbr-openapi.yml#GET /payrollRuns/{ID}"
+    ]
+   },
+   "workday-payroll": {
+    "segments": [
+     "payruns"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "descriptor": "string",
+     "payGroup": "object",
+     "payPeriod": "object",
+     "status": "string",
+     "runCategory": "string",
+     "paymentDate": "string",
+     "totalGrossPay": "number",
+     "totalNetPay": "number",
+     "totalDeductions": "number",
+     "totalTaxes": "number",
+     "workerCount": "integer",
+     "currency": "string",
+     "createdOn": "string",
+     "completedOn": "string",
+     "payGroupId": "string"
+    },
+    "evidence": [
+     "openapi/_original/workday-payroll-payroll-openapi.yml#GET /payRuns",
+     "openapi/_original/workday-payroll-payroll-openapi.yml#GET /payRuns/{payRunId}",
+     "openapi/_original/workday-payroll-payroll-openapi.yml#PATCH /payRuns/{payRunId}",
+     "openapi/_original/workday-payroll-payroll-openapi.yml#POST /payRuns"
+    ]
+   },
+   "xero": {
+    "segments": [
+     "payruns"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "POST item"
+    ],
+    "properties": {
+     "PayrollCalendarID": "string",
+     "PayRunID": "string",
+     "PayRunPeriodStartDate": "string",
+     "PayRunPeriodEndDate": "string",
+     "PayRunStatus": "string",
+     "PaymentDate": "string",
+     "PayslipMessage": "string",
+     "UpdatedDateUTC": "string",
+     "Payslips": "array",
+     "Wages": "number",
+     "Deductions": "number",
+     "Tax": "number",
+     "Super": "number",
+     "Reimbursement": "number",
+     "NetPay": "number",
+     "ValidationErrors": "array",
+     "pagination": "object",
+     "problem": "object",
+     "payRuns": "array",
+     "payRun": "object",
+     "payRunID": "string",
+     "payrollCalendarID": "string",
+     "periodStartDate": "string",
+     "periodEndDate": "string",
+     "paymentDate": "string",
+     "totalCost": "number",
+     "totalPay": "number",
+     "payRunStatus": "string",
+     "payRunType": "string",
+     "calendarType": "string",
+     "postedDateTime": "string",
+     "paySlips": "array"
+    },
+    "evidence": [
+     "openapi/_original/xero-payroll-au-openapi.yml#GET /PayRuns",
+     "openapi/_original/xero-payroll-au-openapi.yml#GET /PayRuns/{PayRunID}",
+     "openapi/_original/xero-payroll-au-openapi.yml#POST /PayRuns",
+     "openapi/_original/xero-payroll-au-openapi.yml#POST /PayRuns/{PayRunID}",
+     "openapi/_original/xero-payroll-nz-openapi.yml#GET /PayRuns",
+     "openapi/_original/xero-payroll-nz-openapi.yml#GET /PayRuns/{PayRunID}",
+     "openapi/_original/xero-payroll-nz-openapi.yml#POST /PayRuns",
+     "openapi/_original/xero-payroll-uk-openapi.yml#GET /PayRuns",
+     "openapi/_original/xero-payroll-uk-openapi.yml#GET /PayRuns/{PayRunID}"
+    ]
+   }
+  },
+  "pay_stub": {
+   "argyle": {
+    "segments": [
+     "paystubs"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "account": "string",
+     "payroll_document": "string",
+     "deduction_list": "array",
+     "filing_status": "array",
+     "tax_list": "array",
+     "status": "string",
+     "paystub_date": "string",
+     "paystub_period": "object",
+     "currency": "string",
+     "gross_pay": "string",
+     "deductions": "string",
+     "taxes": "string",
+     "net_pay": "string",
+     "reimbursements": "string",
+     "hours": "string",
+     "fees": "string",
+     "net_pay_ytd": "string",
+     "gross_pay_ytd": "string",
+     "employer": "string",
+     "employment": "string",
+     "employer_address": "object",
+     "created_at": "string",
+     "updated_at": "string",
+     "destinations": "array",
+     "hours_ytd": "string",
+     "deductions_ytd": "string",
+     "taxes_ytd": "string",
+     "gross_pay_list": "array",
+     "gross_pay_list_totals": "object",
+     "metadata": "object"
+    },
+    "evidence": [
+     "openapi/_original/argyle-api-openapi.yml#GET /partners/v2/paystubs",
+     "openapi/_original/argyle-api-openapi.yml#GET /partners/v2/paystubs/{id}",
+     "openapi/_original/argyle-api-openapi.yml#GET /v2/paystubs",
+     "openapi/_original/argyle-api-openapi.yml#GET /v2/paystubs/{id}"
+    ]
+   },
+   "argyle9a25": {
+    "segments": [
+     "paystubs"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "account": "string",
+     "payroll_document": "string",
+     "deduction_list": "array",
+     "filing_status": "array",
+     "tax_list": "array",
+     "status": "string",
+     "paystub_date": "string",
+     "paystub_period": "object",
+     "currency": "string",
+     "gross_pay": "string",
+     "deductions": "string",
+     "taxes": "string",
+     "net_pay": "string",
+     "reimbursements": "string",
+     "hours": "string",
+     "fees": "string",
+     "net_pay_ytd": "string",
+     "gross_pay_ytd": "string",
+     "employer": "string",
+     "employment": "string",
+     "employer_address": "object",
+     "created_at": "string",
+     "updated_at": "string",
+     "destinations": "array",
+     "hours_ytd": "string",
+     "deductions_ytd": "string",
+     "taxes_ytd": "string",
+     "gross_pay_list": "array",
+     "gross_pay_list_totals": "object",
+     "metadata": "object"
+    },
+    "evidence": [
+     "openapi/_original/argyle9a25-openapi-openapi.yml#GET /partners/v2/paystubs",
+     "openapi/_original/argyle9a25-openapi-openapi.yml#GET /partners/v2/paystubs/{id}",
+     "openapi/_original/argyle9a25-openapi-openapi.yml#GET /paystubs",
+     "openapi/_original/argyle9a25-openapi-openapi.yml#GET /paystubs/{id}"
+    ]
+   },
+   "connecteam": {
+    "segments": [
+     "payslips"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "fileId": "string",
+     "startDate": "string",
+     "endDate": "string"
+    },
+    "evidence": [
+     "openapi/_original/connecteam-openapi.json#POST /users/v1/users/{userId}/payslips"
+    ]
+   },
+   "dailypay": {
+    "segments": [
+     "paychecks"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "type": "string",
+     "id": "string",
+     "attributes": "object",
+     "links": "object",
+     "relationships": "object"
+    },
+    "evidence": [
+     "openapi/_original/dailypay-rest-openapi-original.yml#GET /rest/paychecks",
+     "openapi/_original/dailypay-rest-openapi-original.yml#GET /rest/paychecks/{paycheck_id}"
+    ]
+   },
+   "deel-com": {
+    "segments": [
+     "payslips",
+     "paystubs"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "string",
+     "to": "string",
+     "url": "string",
+     "from": "string",
+     "status": "string",
+     "created_at": "string",
+     "updated_at": "string",
+     "rejected_at": "string",
+     "uploaded_at": "string",
+     "published_at": "string",
+     "reject_reason": "string",
+     "schedule_publishing_date": "string",
+     "worker_id": "string",
+     "period_start": "string",
+     "period_end": "string",
+     "gross": "number",
+     "net": "number",
+     "currency": "string",
+     "download_url": "string",
+     "federal_tax": "number",
+     "state_tax": "number",
+     "fica": "number",
+     "employees": "array",
+     "payroll_id": "string",
+     "payment_date": "string",
+     "payroll_type": "string",
+     "payroll_state": "string",
+     "payroll_end_date": "string",
+     "payroll_schedule": "string",
+     "payroll_start_date": "string"
+    },
+    "evidence": [
+     "openapi/_original/deel-com-openapi.yml#GET /daas/payslips",
+     "openapi/_original/deel-com-openapi.yml#GET /eor/workers/{worker_id}/payslips",
+     "openapi/_original/deel-com-openapi.yml#GET /gp/workers/{id}/payslips",
+     "openapi/_original/deel-global-payroll-api-openapi.yml#GET /payslips",
+     "openapi/_original/deel-global-payroll-api-openapi.yml#GET /paystubs",
+     "openapi/_original/deel-subpackage-paystubs-api-openapi.yml#GET /benefits/legal-entities/{legal_entity_id}/paystubs"
+    ]
+   },
+   "employment-hero": {
+    "segments": [
+     "payslip",
+     "payslips"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "headers": "array",
+     "paygAdjustments": "array",
+     "superAdjustments": "array",
+     "superPayments": "array",
+     "bankPayments": "array",
+     "earningsLines": "array",
+     "paygWithholdingAmount": "number",
+     "sfssAmount": "number",
+     "helpAmount": "number",
+     "superContribution": "number",
+     "employeePostalSuburbName": "string",
+     "employeePostalSuburbPostcode": "string",
+     "employeePostalSuburbState": "string",
+     "superYTD": "number",
+     "sfssYTD": "number",
+     "helpYTD": "number",
+     "paygYTD": "number",
+     "abn": "string",
+     "totalAccruedLeave": "array",
+     "accruedLeave": "array",
+     "leaveTaken": "array",
+     "deductions": "array",
+     "grossYTDDetails": "array",
+     "employeeExpenses": "array",
+     "totalHours": "number",
+     "grossEarnings": "number",
+     "netEarnings": "number",
+     "taxableEarnings": "number",
+     "postTaxDeductionAmount": "number",
+     "preTaxDeductionAmount": "number",
+     "id": "integer",
+     "businessName": "string",
+     "businessAddress": "string",
+     "contactName": "string",
+     "payPeriodStarting": "string",
+     "payPeriodEnding": "string",
+     "message": "string",
+     "employeeId": "integer",
+     "employeeExternalId": "string",
+     "employeeName": "string",
+     "employeeFirstName": "string",
+     "employeeSurname": "string",
+     "employeePostalStreetAddress": "string",
+     "employeePostalAddressLine2": "string",
+     "employeePostalAddressCountry": "string",
+     "notation": "string",
+     "isPublished": "boolean",
+     "grossYTD": "number",
+     "netYTD": "number",
+     "withholdingYTD": "number",
+     "basePayRate": "string",
+     "baseRate": "string",
+     "hourlyRate": "number",
+     "preTaxDeductionsYTD": "number",
+     "postTaxDeductionsYTD": "number",
+     "employeeBaseRate": "number",
+     "employeeBaseRateUnit": "string",
+     "showClassification": "boolean",
+     "showBasePayRate": "boolean",
+     "showEmployeeId": "boolean",
+     "showRateForAnnualEarnings": "boolean",
+     "emailFrom": "string",
+     "emailBodyMessage": "string",
+     "showLeaveAccruals": "boolean",
+     "showLineNotes": "boolean",
+     "showLocationInLineNotes": "boolean",
+     "alphabetisePayCategories": "boolean",
+     "showEmployeeExternalId": "boolean",
+     "employeesMustLoginToDownloadPayslips": "boolean",
+     "paySchedule": "string",
+     "datePaid": "string",
+     "payPeriodStart": "string",
+     "payPeriodEnd": "string",
+     "netPay": "number",
+     "payerName": "string",
+     "payerAbn": "string",
+     "payerBusinessNumber": "string",
+     "employeeEpfNumber": "string",
+     "otherAmounts": "array",
+     "benefitsInKindAdjustments": "array",
+     "employeePostalAddressType": "string",
+     "employeePostalBlockNumber": "string",
+     "employeePostalUnitNumber": "string",
+     "employeePostalLevelNumber": "string",
+     "employeePostalStreetName": "string",
+     "employeePostalAddressLine3": "string",
+     "terminationDate": "string",
+     "startDate": "string",
+     "showEmployeeAddress": "boolean",
+     "showYtdTotals": "boolean",
+     "showUnitsWorked": "boolean",
+     "showEmployeeStartEndDates": "boolean",
+     "paySlipConfig": "object",
+     "payeAdjustments": "array",
+     "kiwiSaverPayments": "array",
+     "payeWithholdingAmount": "number",
+     "kiwiSaverEmployeeContributionYtd": "number",
+     "kiwiSaverEmployerContributionYtd": "number",
+     "esctContributionYtd": "number",
+     "payeYTD": "number",
+     "nzbn": "string",
+     "showKiwiSaverPercentages": "boolean",
+     "employeeNricNumber": "string",
+     "uen": "string",
+     "cpfAdjustments": "array",
+     "foreignTaxAdjustments": "array",
+     "withholdingTaxAmountYtd": "number",
+     "clearanceTaxAmountYtd": "number",
+     "cpfEmployeeContributionYtd": "number",
+     "cpfEmployerContributionYtd": "number",
+     "sdlContributionYtd": "number",
+     "employerVoluntaryCpfYtd": "number",
+     "employerVoluntaryMediSaveYtd": "number",
+     "nricNumberSettings": "string",
+     "employeePostalAddressCity": "string",
+     "employeePostalAddressPostcode": "string",
+     "employeePostalAddressCounty": "string",
+     "employeeNationalInsuranceYTD": "number",
+     "employerNationalInsuranceYTD": "number",
+     "employerClass1ANationalInsuranceContributionYTD": "number",
+     "employerNationalInsuranceContributionIncludingClass1AYTD": "number",
+     "employeePensionYTD": "number",
+     "employerPensionYTD": "number",
+     "crn": "string",
+     "employeeNationalInsuranceContribution": "number",
+     "employerNationalInsuranceContribution": "number",
+     "employerClass1ANationalInsuranceContribution": "number",
+     "employerNationalInsuranceContributionIncludingClass1A": "number",
+     "employeePensionContribution": "number",
+     "employerPensionContribution": "number",
+     "taxCode": "string",
+     "postGradLoanComponentAmount": "number",
+     "studentLoanComponentAmount": "number",
+     "postGradLoanYTD": "number",
+     "studentLoanYTD": "number",
+     "thisEmploymentYtdPay": "number",
+     "thisEmploymentYtdPayrolledBenefits": "number",
+     "thisEmploymentYtdTaxDeducted": "number",
+     "thisEmploymentYtdNIablePay": "number",
+     "showCrnNumber": "boolean",
+     "showPayeReference": "boolean",
+     "paySlipFormat": "string"
+    },
+    "evidence": [
+     "openapi/_original/employment-hero-payroll-au-swagger.json#GET /api/v2/business/{businessId}/payrun/{payRunId}/file/payslip/{employeeId}",
+     "openapi/_original/employment-hero-payroll-au-swagger.json#GET /api/v2/business/{businessId}/payrun/{payRunId}/payslips",
+     "openapi/_original/employment-hero-payroll-au-swagger.json#GET /api/v2/business/{businessId}/payrun/{payRunId}/payslips/{employeeId}",
+     "openapi/_original/employment-hero-payroll-au-swagger.json#GET /api/v2/business/{businessId}/payslip",
+     "openapi/_original/employment-hero-payroll-au-swagger.json#GET /api/v2/business/{businessId}/report/payslip",
+     "openapi/_original/employment-hero-payroll-au-swagger.json#GET /api/v2/ess/{employeeId}/document/payslip",
+     "openapi/_original/employment-hero-payroll-au-swagger.json#GET /api/v2/ess/{employeeId}/document/payslip/{payrunId}",
+     "openapi/_original/employment-hero-payroll-au-swagger.json#POST /api/v2/business/{businessId}/payslip",
+     "openapi/_original/employment-hero-payroll-my-swagger.json#GET /api/v2/business/{businessId}/payrun/{payRunId}/file/payslip/{employeeId}",
+     "openapi/_original/employment-hero-payroll-my-swagger.json#GET /api/v2/business/{businessId}/payrun/{payRunId}/payslips",
+     "openapi/_original/employment-hero-payroll-my-swagger.json#GET /api/v2/business/{businessId}/payrun/{payRunId}/payslips/{employeeId}",
+     "openapi/_original/employment-hero-payroll-my-swagger.json#GET /api/v2/business/{businessId}/payslip"
+    ]
+   },
+   "justworks": {
+    "segments": [
+     "paystubs"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "member_id": "string",
+     "paystub_id": "string",
+     "gross_pay": "integer",
+     "net_pay": "integer",
+     "currency": "string",
+     "pay_date": "string",
+     "pay_group": "string",
+     "pay_period_end": "string",
+     "pay_period_start": "string",
+     "earnings": "array",
+     "employee_deductions": "array",
+     "employer_contributions": "array"
+    },
+    "evidence": [
+     "openapi/_original/justworks-payroll-api-openapi.yml#GET /v1/payrolls/{payroll_id}/paystubs",
+     "openapi/_original/justworks-payroll-api-openapi.yml#GET /v1/paystubs/{paystub_id}"
+    ]
+   },
+   "keka": {
+    "segments": [
+     "payments"
+    ],
+    "operations": [
+     "GET collection",
+     "PUT collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/keka-hr-api-openapi.yaml#GET /api/v1/payroll/paygroups/{payGroupId}/paycycles/{payCycleId}/paybatches/{payBatchId}/payments",
+     "openapi/_original/keka-hr-api-openapi.yaml#PUT /api/v1/payroll/paygroups/{payGroupId}/paycycles/{payCycleId}/paybatches/{payBatchId}/payments"
+    ]
+   },
+   "kombo": {
+    "segments": [
+     "payslips"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "string",
+     "remote_id": "string",
+     "custom_fields": [
+      "object",
+      "null"
+     ],
+     "integration_fields": "array",
+     "changed_at": "string",
+     "remote_deleted_at": [
+      "string",
+      "null"
+     ],
+     "remote_data": [
+      "object",
+      "null"
+     ],
+     "totals": "object",
+     "employee": "object",
+     "pay_run": [
+      "object",
+      "null"
+     ],
+     "line_items": "array"
+    },
+    "evidence": [
+     "openapi/_original/kombo-openapi.json#GET /hris/payslips"
+    ]
+   },
+   "kufu": {
+    "segments": [
+     "payslips"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "crew_id": "string",
+     "payroll_id": "string",
+     "memo": "string",
+     "mismatch": "boolean",
+     "last_notified_at": "string",
+     "company_id": "string",
+     "company": null,
+     "allowances": "array",
+     "deductions": "array",
+     "attendances": "array",
+     "payroll_aggregates": "array",
+     "values": "array",
+     "payslips": "array"
+    },
+    "evidence": [
+     "openapi/_original/kufu-smarthr-openapi.json#DELETE /v1/payrolls/{payroll_id}/payslips/{id}",
+     "openapi/_original/kufu-smarthr-openapi.json#GET /v1/payrolls/{payroll_id}/payslips",
+     "openapi/_original/kufu-smarthr-openapi.json#GET /v1/payrolls/{payroll_id}/payslips/{id}",
+     "openapi/_original/kufu-smarthr-openapi.json#POST /v1/payrolls/{payroll_id}/payslips",
+     "openapi/_original/kufu-smarthr-openapi.json#POST /v1/payrolls/{payroll_id}/payslips/bulk"
+    ]
+   },
+   "oyster-hr": {
+    "segments": [
+     "payslips"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "string",
+     "title": "string",
+     "description": "string",
+     "url": "string",
+     "contentType": "string",
+     "type": "string"
+    },
+    "evidence": [
+     "openapi/_original/oyster-hr-endpoints-openapi.yml#GET /v1/engagements/{id}/payslips"
+    ]
+   },
+   "payfit": {
+    "segments": [
+     "payslips"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/payfit-openapi.yml#GET /collaborators/{id}/payslips",
+     "openapi/_original/payfit-openapi.yml#GET /collaborators/{id}/payslips/{payslipId}"
+    ]
+   },
+   "paylocity": {
+    "segments": [
+     "paystatements"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/paylocity-openapi.yml#GET /apihub/payrollhistory/v1/companies/{companyId}/employees/{employeeId}/paystatements"
+    ]
+   },
+   "pinwheel": {
+    "segments": [
+     "paystubs"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "created_at": "string",
+     "account_id": "string",
+     "pay_date": "string",
+     "pay_period_start": "string",
+     "pay_period_end": "string",
+     "currency": null,
+     "gross_pay_amount": "integer",
+     "net_pay_amount": "integer",
+     "check_amount": "integer",
+     "gross_pay_ytd": "integer",
+     "net_pay_ytd": "integer",
+     "total_taxes": "integer",
+     "total_deductions": "integer",
+     "total_reimbursements": "integer",
+     "external_paystub_id": "string",
+     "employer_name": "string",
+     "taxes": "array",
+     "deductions": "array",
+     "earnings": "array",
+     "time_off": "array",
+     "document": null,
+     "employee_external_id": "string"
+    },
+    "evidence": [
+     "openapi/_original/pinwheel-pinwheel-api-openapi.yml#GET /accounts/{account_id}/paystubs",
+     "openapi/_original/pinwheel-pinwheel-api-openapi.yml#GET /accounts/{account_id}/paystubs/{paystub_id}",
+     "openapi/_original/pinwheel-pinwheel-api-openapi.yml#GET /company_connections/{company_connection_id}/paystubs/{employee_external_id}"
+    ]
+   },
+   "remote": {
+    "segments": [
+     "payslips"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "current_page": "integer",
+     "payslips": "array",
+     "total_count": "integer",
+     "total_pages": "integer"
+    },
+    "evidence": [
+     "openapi/_original/remote-openapi-original.json#GET /v1/employee/payslips",
+     "openapi/_original/remote-openapi-original.json#GET /v1/payslips"
+    ]
+   },
+   "remote-com": {
+    "segments": [
+     "payslips"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "employment_id": "string",
+     "period_start": "string",
+     "period_end": "string",
+     "gross_amount": "integer",
+     "net_amount": "integer",
+     "currency": "string",
+     "released_at": "string",
+     "document_url": "string"
+    },
+    "evidence": [
+     "openapi/_original/remote-payroll-billing-api-openapi.yml#GET /payslips",
+     "openapi/_original/remote-payroll-billing-api-openapi.yml#GET /payslips/{payslip_id}"
+    ]
+   },
+   "smarthr": {
+    "segments": [
+     "payslips"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "crew_id": "string",
+     "payroll_id": "string",
+     "memo": "string",
+     "mismatch": "boolean",
+     "last_notified_at": "string",
+     "company_id": "string",
+     "company": null,
+     "allowances": "array",
+     "deductions": "array",
+     "attendances": "array",
+     "payroll_aggregates": "array",
+     "values": "array",
+     "payslips": "array"
+    },
+    "evidence": [
+     "openapi/_original/kufu-default-api-openapi.yml#DELETE /v1/payrolls/{payroll_id}/payslips/{id}",
+     "openapi/_original/kufu-default-api-openapi.yml#GET /v1/payrolls/{payroll_id}/payslips",
+     "openapi/_original/kufu-default-api-openapi.yml#GET /v1/payrolls/{payroll_id}/payslips/{id}",
+     "openapi/_original/kufu-default-api-openapi.yml#POST /v1/payrolls/{payroll_id}/payslips",
+     "openapi/_original/kufu-default-api-openapi.yml#POST /v1/payrolls/{payroll_id}/payslips/bulk"
+    ]
+   },
+   "ukg-pro": {
+    "segments": [
+     "pay-statements"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "statementId": "string",
+     "employeeId": "string",
+     "payPeriodStart": "string",
+     "payPeriodEnd": "string",
+     "grossPay": "number",
+     "netPay": "number"
+    },
+    "evidence": [
+     "openapi/_original/ukg-pro-openapi.yml#GET /pay/v1/pay-statements"
+    ]
+   },
+   "visma": {
+    "segments": [
+     "payslips"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "Id": "string",
+     "EmployeeId": "string",
+     "SalaryPeriod_ToDate": "string",
+     "SalaryPeriod_FromDate": "string",
+     "DeviationPeriod_ToDate": "string",
+     "CreatedUtc": "string",
+     "ModifiedUtc": "string",
+     "LockedDate": "string",
+     "Locked": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/visma-payroll-api-v1-openapi-original.json#GET /v1/payslips/{payslipId}",
+     "openapi/_original/visma-payroll-api-v1-openapi.json#GET /v1/payslips/{payslipId}",
+     "openapi/_original/visma-payroll-api-v2-openapi-original.json#GET /v2/payslips/{payslipId}",
+     "openapi/_original/visma-payroll-api-v2-openapi.json#GET /v2/payslips/{payslipId}"
+    ]
+   },
+   "workday": {
+    "segments": [
+     "payslips"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "string",
+     "descriptor": "string",
+     "payPeriodStartDate": "string",
+     "payPeriodEndDate": "string",
+     "payDate": "string",
+     "grossPay": "number",
+     "netPay": "number",
+     "totalDeductions": "number",
+     "totalTaxes": "number",
+     "currency": "object",
+     "payGroup": "object"
+    },
+    "evidence": [
+     "openapi/_original/payroll.yml#GET /workers/{ID}/paySlips"
+    ]
+   },
+   "workday-integration": {
+    "segments": [
+     "payslips"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "string",
+     "descriptor": "string",
+     "payPeriodStartDate": "string",
+     "payPeriodEndDate": "string",
+     "grossPay": "number",
+     "netPay": "number"
+    },
+    "evidence": [
+     "openapi/_original/workday-integration-human-capital-management-openapi.yml#GET /workers/{ID}/paySlips"
+    ]
+   },
+   "workday-payroll": {
+    "segments": [
+     "payslips",
+     "payments"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "worker": "object",
+     "payPeriod": "object",
+     "paymentDate": "string",
+     "grossPay": "number",
+     "netPay": "number",
+     "totalEarnings": "number",
+     "totalDeductions": "number",
+     "totalTaxes": "number",
+     "currency": "string",
+     "earnings": "array",
+     "deductions": "array",
+     "taxes": "array",
+     "yearToDateGross": "number",
+     "yearToDateNet": "number",
+     "yearToDateTaxes": "number",
+     "payRunId": "string",
+     "paymentMethod": "string",
+     "amount": "number",
+     "settlementDate": "string",
+     "status": "string",
+     "bankAccount": "object",
+     "checkNumber": "string"
+    },
+    "evidence": [
+     "openapi/_original/workday-payroll-payroll-results-openapi.yml#GET /payRuns/{payRunId}/payments",
+     "openapi/_original/workday-payroll-payroll-results-openapi.yml#GET /workers/{workerId}/payslips",
+     "openapi/_original/workday-payroll-payroll-results-openapi.yml#GET /workers/{workerId}/payslips/{payslipId}"
+    ]
+   },
+   "xero": {
+    "segments": [
+     "payslips",
+     "payslip"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST item",
+     "PUT item"
+    ],
+    "properties": {
+     "EmployeeID": "string",
+     "PayslipID": "string",
+     "FirstName": "string",
+     "LastName": "string",
+     "Wages": "number",
+     "Deductions": "number",
+     "Tax": "number",
+     "Super": "number",
+     "Reimbursements": "number",
+     "NetPay": "number",
+     "EarningsLines": "array",
+     "LeaveEarningsLines": "array",
+     "TimesheetEarningsLines": "array",
+     "DeductionLines": "array",
+     "LeaveAccrualLines": "array",
+     "ReimbursementLines": "array",
+     "SuperannuationLines": "array",
+     "TaxLines": "array",
+     "UpdatedDateUTC": "string",
+     "pagination": "object",
+     "problem": "object",
+     "paySlips": "array",
+     "paySlip": "object",
+     "paySlipID": "string",
+     "employeeID": "string",
+     "payRunID": "string",
+     "lastEdited": "string",
+     "firstName": "string",
+     "lastName": "string",
+     "totalEarnings": "number",
+     "grossEarnings": "number",
+     "totalPay": "number",
+     "totalEmployerTaxes": "number",
+     "totalEmployeeTaxes": "number",
+     "totalDeductions": "number",
+     "totalReimbursements": "number",
+     "totalStatutoryDeductions": "number",
+     "totalSuperannuation": "number",
+     "bacsHash": "string",
+     "paymentMethod": "string",
+     "earningsLines": "array",
+     "leaveEarningsLines": "array",
+     "timesheetEarningsLines": "array",
+     "deductionLines": "array",
+     "reimbursementLines": "array",
+     "leaveAccrualLines": "array",
+     "superannuationLines": "array",
+     "paymentLines": "array",
+     "employeeTaxLines": "array",
+     "employerTaxLines": "array",
+     "statutoryDeductionLines": "array",
+     "taxSettings": "object",
+     "grossEarningsHistory": "object"
+    },
+    "evidence": [
+     "openapi/_original/xero-payroll-au-openapi.yml#GET /Payslip/{PayslipID}",
+     "openapi/_original/xero-payroll-au-openapi.yml#POST /Payslip/{PayslipID}",
+     "openapi/_original/xero-payroll-nz-openapi.yml#GET /PaySlips",
+     "openapi/_original/xero-payroll-nz-openapi.yml#GET /PaySlips/{PaySlipID}",
+     "openapi/_original/xero-payroll-nz-openapi.yml#PUT /PaySlips/{PaySlipID}",
+     "openapi/_original/xero-payroll-uk-openapi.yml#GET /Payslips",
+     "openapi/_original/xero-payroll-uk-openapi.yml#GET /Payslips/{PayslipID}"
+    ]
+   }
+  },
+  "pay_schedule": {
+   "bindbee": {
+    "segments": [
+     "pay-groups"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "remote_id": null,
+     "modified_at": "string",
+     "raw_data": null,
+     "custom_fields": null,
+     "name": null,
+     "description": null
+    },
+    "evidence": [
+     "openapi/_original/bindbee-openapi.json#GET /api/hris/v1/pay-groups",
+     "openapi/_original/bindbee-openapi.json#GET /api/hris/v1/pay-groups/{id}"
+    ]
+   },
+   "finch": {
+    "segments": [
+     "pay-groups"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "pay_frequencies": "array",
+     "individual_ids": "array"
+    },
+    "evidence": [
+     "openapi/_original/finch-openapi.json#GET /employer/pay-groups",
+     "openapi/_original/finch-openapi.json#GET /employer/pay-groups/{pay_group_id}"
+    ]
+   },
+   "gusto": {
+    "segments": [
+     "pay_schedules"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/gusto-openapi.yml#GET /v1/companies/{company_id}/pay_schedules",
+     "openapi/_original/gusto-openapi.yml#POST /v1/companies/{company_id}/pay_schedules",
+     "openapi/_original/gusto-openapi.yml#PUT /v1/companies/{company_id}/pay_schedules/{pay_schedule_id}"
+    ]
+   },
+   "keka": {
+    "segments": [
+     "paygroups"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/keka-hr-api-openapi.yaml#GET /api/v1/payroll/paygroups"
+    ]
+   },
+   "kombo": {
+    "segments": [
+     "pay-groups"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "string",
+     "remote_id": "string",
+     "name": [
+      "string",
+      "null"
+     ],
+     "changed_at": "string",
+     "remote_deleted_at": [
+      "string",
+      "null"
+     ],
+     "remote_data": [
+      "object",
+      "null"
+     ],
+     "members": "array"
+    },
+    "evidence": [
+     "openapi/_original/kombo-openapi.json#GET /hris/pay-groups"
+    ]
+   },
+   "onpay": {
+    "segments": [
+     "pay-schedules"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "integer",
+     "name": "string",
+     "frequency": "integer",
+     "check_date": "string",
+     "period_start": "string",
+     "period_end": "string",
+     "submission_deadline": "string",
+     "version": "string"
+    },
+    "evidence": [
+     "openapi/_original/onpay-api-openapi.json#GET /company/pay-schedules"
+    ]
+   },
+   "thatch": {
+    "segments": [
+     "pay_schedules"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "reference_pay_date": "string",
+     "start_date": "string",
+     "end_date": "string",
+     "frequency": "string",
+     "first_day": "integer",
+     "second_day": "integer",
+     "bank_closure_strategy": "string",
+     "remote_id": "string",
+     "active": "boolean",
+     "first_pay_date": "string",
+     "second_pay_date": "string"
+    },
+    "evidence": [
+     "openapi/_original/thatch-partners-openapi.yml#DELETE /employers/{employer_id}/pay_schedules/{pay_schedule_id}",
+     "openapi/_original/thatch-partners-openapi.yml#GET /employers/{employer_id}/pay_schedules",
+     "openapi/_original/thatch-partners-openapi.yml#GET /employers/{employer_id}/pay_schedules/{pay_schedule_id}",
+     "openapi/_original/thatch-partners-openapi.yml#PATCH /employers/{employer_id}/pay_schedules/{pay_schedule_id}",
+     "openapi/_original/thatch-partners-openapi.yml#POST /employers/{employer_id}/pay_schedules"
+    ]
+   },
+   "thatch-health": {
+    "segments": [
+     "pay_schedules"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "reference_pay_date": "string",
+     "start_date": "string",
+     "end_date": "string",
+     "frequency": "string",
+     "first_day": "integer",
+     "second_day": "integer",
+     "bank_closure_strategy": "string",
+     "remote_id": "string",
+     "active": "boolean",
+     "first_pay_date": "string",
+     "second_pay_date": "string"
+    },
+    "evidence": [
+     "openapi/_original/thatch-health-partners-openapi.yml#DELETE /employers/{employer_id}/pay_schedules/{pay_schedule_id}",
+     "openapi/_original/thatch-health-partners-openapi.yml#GET /employers/{employer_id}/pay_schedules",
+     "openapi/_original/thatch-health-partners-openapi.yml#GET /employers/{employer_id}/pay_schedules/{pay_schedule_id}",
+     "openapi/_original/thatch-health-partners-openapi.yml#PATCH /employers/{employer_id}/pay_schedules/{pay_schedule_id}",
+     "openapi/_original/thatch-health-partners-openapi.yml#POST /employers/{employer_id}/pay_schedules",
+     "openapi/_original/thatch-health-platforms-openapi-original.yml#DELETE /employers/{employer_id}/pay_schedules/{pay_schedule_id}",
+     "openapi/_original/thatch-health-platforms-openapi-original.yml#GET /employers/{employer_id}/pay_schedules",
+     "openapi/_original/thatch-health-platforms-openapi-original.yml#GET /employers/{employer_id}/pay_schedules/{pay_schedule_id}",
+     "openapi/_original/thatch-health-platforms-openapi-original.yml#PATCH /employers/{employer_id}/pay_schedules/{pay_schedule_id}",
+     "openapi/_original/thatch-health-platforms-openapi-original.yml#POST /employers/{employer_id}/pay_schedules"
+    ]
+   },
+   "wagepoint": {
+    "segments": [
+     "pay-groups"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "integer",
+     "name": "string",
+     "is_auto_run": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/wagepoint-api-openapi.json#GET /v1/companies/{company_id}/pay-groups"
+    ]
+   },
+   "workday": {
+    "segments": [
+     "paygroups"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "descriptor": "string",
+     "name": "string",
+     "country": "object",
+     "payFrequency": "object",
+     "currency": "object",
+     "isActive": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/payroll.yml#GET /payGroups",
+     "openapi/_original/payroll.yml#GET /payGroups/{ID}"
+    ]
+   },
+   "workday-integration": {
+    "segments": [
+     "paygroups"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "descriptor": "string",
+     "payGroupName": "string",
+     "frequency": "object",
+     "country": "object"
+    },
+    "evidence": [
+     "openapi/_original/workday-integration-payroll-openapi.yml#GET /payGroups",
+     "openapi/_original/workday-integration-payroll-openapi.yml#GET /payGroups/{ID}"
+    ]
+   },
+   "workday-integrations": {
+    "segments": [
+     "paygroups"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "string",
+     "descriptor": "string",
+     "payFrequency": "string",
+     "country": "string",
+     "currency": "string"
+    },
+    "evidence": [
+     "openapi/_original/workday-integrations-rest-api-openapi.yml#GET /payGroups"
+    ]
+   },
+   "workday-payroll": {
+    "segments": [
+     "paygroups"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "descriptor": "string",
+     "payFrequency": "string",
+     "currency": "string",
+     "country": "string",
+     "runCategory": "string",
+     "workerCount": "integer",
+     "inactive": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/workday-payroll-payroll-openapi.yml#GET /payGroups",
+     "openapi/_original/workday-payroll-payroll-openapi.yml#GET /payGroups/{payGroupId}"
+    ]
+   }
+  }
+ },
+ "naming": {
+  "path_segment": {
+   "lower": [
+    "360learning",
+    "401go",
+    "7shifts",
+    "absentify",
+    "accurate-bg",
+    "activtrak",
+    "adp",
+    "alayacare",
+    "argyle",
+    "argyle9a25",
+    "assembled",
+    "atomic-fi",
+    "automatic-data-processing",
+    "bamboohr",
+    "bindbee",
+    "bitrix24",
+    "bob",
+    "bonusly",
+    "breathe-hr",
+    "bridgit",
+    "bright-pattern",
+    "buk",
+    "cadana",
+    "careacademy",
+    "charliehr",
+    "charthop",
+    "checkr",
+    "cobee",
+    "connecteam",
+    "contalink",
+    "coolcollege",
+    "culture-amp",
+    "dailypay",
+    "deel-com",
+    "deputy",
+    "eightfold-ai",
+    "employ-inc",
+    "employment-hero",
+    "erpnext",
+    "ethena",
+    "factorial-hr",
+    "fama",
+    "fdx",
+    "finch",
+    "flowaccount",
+    "fountain-com",
+    "freeagent",
+    "freee",
+    "freshteam",
+    "genesys",
+    "gloat",
+    "goethena",
+    "goodhire",
+    "greenhouse",
+    "greenhouse-io",
+    "growthspace",
+    "gusto",
+    "guusto",
+    "hakuna",
+    "harri",
+    "harver",
+    "heymilo",
+    "hibob",
+    "highline-fi",
+    "hr-partner",
+    "hubstaff",
+    "humaans-io",
+    "humanity",
+    "intelycare",
+    "intuit",
+    "justworks",
+    "keka",
+    "knit",
+    "kolayik",
+    "kombo",
+    "kota",
+    "kufu",
+    "lattice",
+    "leapsome",
+    "lever-co",
+    "lincoln-national",
+    "lucca",
+    "malt",
+    "micro1",
+    "mosey",
+    "namely",
+    "nayya",
+    "nectar-hr",
+    "niural",
+    "nobueno",
+    "nomad-health",
+    "nory",
+    "offendersearch-api",
+    "onpay",
+    "onsi",
+    "open-financial",
+    "optibus",
+    "oracle-fusion",
+    "oyster-hr",
+    "papaya-global",
+    "paychex-developer",
+    "payfit",
+    "paylocity",
+    "peakon",
+    "peopleforce",
+    "peoplesoft",
+    "personio",
+    "pinpoint",
+    "pinwheel",
+    "plansource",
+    "puzzle",
+    "quickbooks-online",
+    "quinyx",
+    "quotapath",
+    "recruitee",
+    "reflektive",
+    "remote",
+    "remote-com",
+    "rhumbix",
+    "rippling",
+    "sage",
+    "sage-hr",
+    "salsa",
+    "sap-fieldglass",
+    "sap-successfactors",
+    "sense-talent-labs",
+    "sesame-hr",
+    "shyft",
+    "simpplr",
+    "skedulo",
+    "small-improvements",
+    "smart-pension",
+    "smarthr",
+    "smartrecruiters",
+    "sterling-check",
+    "supaglue",
+    "tadeus-api",
+    "talentlms",
+    "talkpush",
+    "teambridge",
+    "teamohana",
+    "thatch",
+    "thatch-health",
+    "themuse",
+    "toggl",
+    "towers-watson",
+    "trakstar",
+    "truto",
+    "truv",
+    "ukg-pro",
+    "ukg-ready",
+    "university-of-wisconsin-madison",
+    "vcv",
+    "vidgrid",
+    "visier",
+    "visma",
+    "wagepoint",
+    "wagestream",
+    "weavix",
+    "wellhub",
+    "when-i-work",
+    "wingspan",
+    "wizehire",
+    "work-market",
+    "workable",
+    "workday",
+    "workday-advanced-compensation",
+    "workday-benefits",
+    "workday-business-processes",
+    "workday-extend",
+    "workday-integration",
+    "workday-integrations",
+    "workday-payroll",
+    "workday-studio",
+    "workera",
+    "workleap",
+    "workmotion",
+    "workstream",
+    "xero",
+    "yoodli",
+    "zeal-hq",
+    "zenhr-inc",
+    "zoho",
+    "zoho-people"
+   ],
+   "kebab-case": [
+    "360learning",
+    "401go",
+    "accurate-bg",
+    "adp",
+    "alayacare",
+    "argyle",
+    "argyle9a25",
+    "atomic-fi",
+    "automatic-data-processing",
+    "bindbee",
+    "bob",
+    "bridgit",
+    "buk",
+    "cadana",
+    "charthop",
+    "cobee",
+    "connecteam",
+    "contalink",
+    "culture-amp",
+    "deel-com",
+    "eightfold-ai",
+    "employ-inc",
+    "employment-hero",
+    "ethena",
+    "fdx",
+    "finch",
+    "flowaccount",
+    "fountain-com",
+    "gloat",
+    "goethena",
+    "growthspace",
+    "gusto",
+    "guusto",
+    "harver",
+    "heymilo",
+    "hibob",
+    "highline-fi",
+    "hr-partner",
+    "humaans-io",
+    "humanity",
+    "justworks",
+    "keka",
+    "knit",
+    "kolayik",
+    "kombo",
+    "kota",
+    "leapsome",
+    "lincoln-national",
+    "lucca",
+    "malt",
+    "nayya",
+    "nectar-hr",
+    "niural",
+    "nobueno",
+    "nomad-health",
+    "nory",
+    "offendersearch-api",
+    "onpay",
+    "open-financial",
+    "optibus",
+    "payfit",
+    "peoplesoft",
+    "personio",
+    "puzzle",
+    "quinyx",
+    "quotapath",
+    "reflektive",
+    "remote",
+    "sage-hr",
+    "salsa",
+    "sense-talent-labs",
+    "sesame-hr",
+    "shyft",
+    "simpplr",
+    "skedulo",
+    "small-improvements",
+    "smart-pension",
+    "smartrecruiters",
+    "supaglue",
+    "tadeus-api",
+    "talentlms",
+    "towers-watson",
+    "truto",
+    "truv",
+    "ukg-pro",
+    "vcv",
+    "visier",
+    "wagepoint",
+    "wagestream",
+    "weavix",
+    "when-i-work",
+    "wingspan",
+    "workable",
+    "workera",
+    "workmotion",
+    "xero"
+   ],
+   "snake_case": [
+    "7shifts",
+    "absentify",
+    "alayacare",
+    "assembled",
+    "bamboohr",
+    "bindbee",
+    "bonusly",
+    "bright-pattern",
+    "buk",
+    "careacademy",
+    "charliehr",
+    "checkr",
+    "coolcollege",
+    "deel-com",
+    "deputy",
+    "eightfold-ai",
+    "employment-hero",
+    "factorial-hr",
+    "fama",
+    "freeagent",
+    "freee",
+    "freshteam",
+    "gloat",
+    "greenhouse",
+    "greenhouse-io",
+    "gusto",
+    "hakuna",
+    "harri",
+    "hubstaff",
+    "humanity",
+    "kombo",
+    "kota",
+    "kufu",
+    "lever-co",
+    "mosey",
+    "namely",
+    "nayya",
+    "nobueno",
+    "nomad-health",
+    "open-financial",
+    "optibus",
+    "oyster-hr",
+    "peopleforce",
+    "pinwheel",
+    "plansource",
+    "remote",
+    "remote-com",
+    "rippling",
+    "sage",
+    "sap-fieldglass",
+    "shyft",
+    "skedulo",
+    "small-improvements",
+    "smart-pension",
+    "smarthr",
+    "supaglue",
+    "talkpush",
+    "thatch",
+    "thatch-health",
+    "toggl",
+    "truv",
+    "ukg-ready",
+    "visma",
+    "work-market",
+    "workable",
+    "workera",
+    "workstream",
+    "zenhr-inc",
+    "zoho"
+   ],
+   "other": [
+    "360learning",
+    "adp",
+    "ashby",
+    "ashby-hq",
+    "automatic-data-processing",
+    "bitrix24",
+    "bonusly",
+    "bridgit",
+    "buk",
+    "charthop",
+    "checkr",
+    "coolcollege",
+    "deel-com",
+    "employment-hero",
+    "erpnext",
+    "freee",
+    "growthspace",
+    "harver",
+    "humanity",
+    "keka",
+    "optibus",
+    "oracle-fusion",
+    "peoplesoft",
+    "sap-fieldglass",
+    "sap-s4hana",
+    "sap-successfactors",
+    "shyft",
+    "simpplr",
+    "small-improvements",
+    "smart-pension",
+    "supaglue",
+    "talentlms",
+    "university-of-wisconsin-madison",
+    "visma",
+    "when-i-work",
+    "wingspan",
+    "workday-benefits",
+    "workday-business-processes",
+    "workday-studio",
+    "xero",
+    "zoho",
+    "zoho-recruit"
+   ],
+   "camelCase": [
+    "bridgit",
+    "bright-pattern",
+    "buk",
+    "cadana",
+    "charthop",
+    "connecteam",
+    "deputy",
+    "employment-hero",
+    "harver",
+    "lattice",
+    "nory",
+    "oracle-fusion",
+    "puzzle",
+    "quinyx",
+    "sap-fieldglass",
+    "simpplr",
+    "skedulo",
+    "small-improvements",
+    "university-of-wisconsin-madison",
+    "visier",
+    "visma",
+    "wingspan",
+    "workday",
+    "workday-advanced-compensation",
+    "workday-benefits",
+    "workday-business-processes",
+    "workday-extend",
+    "workday-integration",
+    "workday-integrations",
+    "workday-payroll",
+    "workday-recruiting",
+    "workday-studio",
+    "xero",
+    "zeal-hq",
+    "zoho",
+    "zoho-people"
+   ],
+   "PascalCase": [
+    "adp",
+    "automatic-data-processing",
+    "bridgit",
+    "bright-pattern",
+    "deel-com",
+    "deputy",
+    "eightfold-ai",
+    "employment-hero",
+    "flowaccount",
+    "leapsome",
+    "malt",
+    "oracle-fusion",
+    "remote",
+    "sap-fieldglass",
+    "sap-successfactors",
+    "shyft",
+    "small-improvements",
+    "teamohana",
+    "visma",
+    "workday-studio",
+    "xero",
+    "zoho",
+    "zoho-recruit"
+   ]
+  },
+  "path_param": {
+   "lower": [
+    "360learning",
+    "7shifts",
+    "absentify",
+    "accurate-bg",
+    "activtrak",
+    "adp",
+    "alayacare",
+    "argyle",
+    "argyle9a25",
+    "assembled",
+    "atomic-fi",
+    "automatic-data-processing",
+    "bamboohr",
+    "bindbee",
+    "bob",
+    "bonusly",
+    "breathe-hr",
+    "bridgit",
+    "bright-pattern",
+    "buk",
+    "charliehr",
+    "charthop",
+    "checkr",
+    "connecteam",
+    "contalink",
+    "culture-amp",
+    "deel-com",
+    "deputy",
+    "employ-inc",
+    "employment-hero",
+    "ethena",
+    "factorial-hr",
+    "flowaccount",
+    "fountain-com",
+    "freeagent",
+    "freee",
+    "freshteam",
+    "gloat",
+    "goethena",
+    "greenhouse",
+    "greenhouse-io",
+    "guusto",
+    "hakuna",
+    "harri",
+    "hibob",
+    "hr-partner",
+    "humaans-io",
+    "humanity",
+    "keka",
+    "knit",
+    "kolayik",
+    "kombo",
+    "kota",
+    "kufu",
+    "lattice",
+    "lever-co",
+    "lucca",
+    "malt",
+    "mosey",
+    "namely",
+    "nobueno",
+    "nomad-health",
+    "nory",
+    "offendersearch-api",
+    "onpay",
+    "onsi",
+    "open-financial",
+    "oracle-fusion",
+    "oyster-hr",
+    "papaya-global",
+    "payfit",
+    "peakon",
+    "peopleforce",
+    "peoplesoft",
+    "pinpoint",
+    "plansource",
+    "puzzle",
+    "quinyx",
+    "quotapath",
+    "recruitee",
+    "reflektive",
+    "remote",
+    "sage",
+    "sage-hr",
+    "sap-fieldglass",
+    "sense-talent-labs",
+    "sesame-hr",
+    "simpplr",
+    "skedulo",
+    "small-improvements",
+    "smart-pension",
+    "smarthr",
+    "tadeus-api",
+    "talentlms",
+    "talkpush",
+    "teamohana",
+    "thatch",
+    "thatch-health",
+    "themuse",
+    "trakstar",
+    "truto",
+    "truv",
+    "university-of-wisconsin-madison",
+    "vcv",
+    "vidgrid",
+    "visier",
+    "visma",
+    "weavix",
+    "when-i-work",
+    "wingspan",
+    "work-market",
+    "workable",
+    "workday-business-processes",
+    "workera",
+    "workstream",
+    "xero",
+    "zenhr-inc",
+    "zoho"
+   ],
+   "camelCase": [
+    "360learning",
+    "activtrak",
+    "adp",
+    "atomic-fi",
+    "automatic-data-processing",
+    "bamboohr",
+    "bob",
+    "bridgit",
+    "bright-pattern",
+    "cadana",
+    "careacademy",
+    "charthop",
+    "cobee",
+    "connecteam",
+    "deel-com",
+    "eightfold-ai",
+    "employment-hero",
+    "fdx",
+    "flowaccount",
+    "genesys",
+    "growthspace",
+    "guusto",
+    "harri",
+    "harver",
+    "hibob",
+    "hr-partner",
+    "humanity",
+    "intelycare",
+    "intuit",
+    "keka",
+    "kolayik",
+    "leapsome",
+    "lever-co",
+    "malt",
+    "micro1",
+    "nayya",
+    "nectar-hr",
+    "nory",
+    "offendersearch-api",
+    "onsi",
+    "optibus",
+    "oracle-fusion",
+    "paychex-developer",
+    "payfit",
+    "paylocity",
+    "peakon",
+    "peoplesoft",
+    "puzzle",
+    "quickbooks-online",
+    "quinyx",
+    "salsa",
+    "sap-fieldglass",
+    "sense-talent-labs",
+    "sesame-hr",
+    "skedulo",
+    "small-improvements",
+    "smartrecruiters",
+    "sterling-check",
+    "teambridge",
+    "towers-watson",
+    "trakstar",
+    "ukg-pro",
+    "university-of-wisconsin-madison",
+    "vcv",
+    "visier",
+    "visma",
+    "weavix",
+    "wingspan",
+    "work-market",
+    "workday",
+    "workday-advanced-compensation",
+    "workday-extend",
+    "workday-integration",
+    "workday-integrations",
+    "workday-payroll",
+    "workleap",
+    "workmotion",
+    "xero",
+    "yoodli",
+    "zoho",
+    "zoho-people"
+   ],
+   "snake_case": [
+    "401go",
+    "7shifts",
+    "absentify",
+    "alayacare",
+    "argyle",
+    "argyle9a25",
+    "bindbee",
+    "bright-pattern",
+    "buk",
+    "cadana",
+    "checkr",
+    "culture-amp",
+    "dailypay",
+    "deel-com",
+    "employment-hero",
+    "fama",
+    "finch",
+    "fountain-com",
+    "freee",
+    "gloat",
+    "goodhire",
+    "greenhouse",
+    "greenhouse-io",
+    "gusto",
+    "harri",
+    "heymilo",
+    "hubstaff",
+    "humanity",
+    "intelycare",
+    "justworks",
+    "kombo",
+    "kota",
+    "kufu",
+    "mosey",
+    "nobueno",
+    "nomad-health",
+    "onpay",
+    "open-financial",
+    "oyster-hr",
+    "papaya-global",
+    "personio",
+    "pinwheel",
+    "plansource",
+    "quotapath",
+    "recruitee",
+    "remote",
+    "remote-com",
+    "rhumbix",
+    "rippling",
+    "sage-hr",
+    "sap-fieldglass",
+    "shyft",
+    "simpplr",
+    "skedulo",
+    "smart-pension",
+    "smarthr",
+    "supaglue",
+    "talkpush",
+    "thatch",
+    "thatch-health",
+    "toggl",
+    "truv",
+    "vcv",
+    "wagepoint",
+    "when-i-work",
+    "wingspan",
+    "wizehire",
+    "workera",
+    "workstream",
+    "zenhr-inc",
+    "zoho",
+    "zoho-recruit"
+   ],
+   "kebab-case": [
+    "adp",
+    "automatic-data-processing",
+    "bob",
+    "coolcollege",
+    "hibob",
+    "highline-fi",
+    "namely",
+    "niural",
+    "simpplr",
+    "small-improvements",
+    "wellhub",
+    "zoho"
+   ],
+   "PascalCase": [
+    "erpnext",
+    "oracle-fusion",
+    "sap-fieldglass",
+    "visma",
+    "workday",
+    "workday-advanced-compensation",
+    "workday-benefits",
+    "workday-business-processes",
+    "workday-integration",
+    "workday-studio",
+    "xero"
+   ],
+   "other": [
+    "adp",
+    "automatic-data-processing",
+    "open-financial",
+    "zenhr-inc"
+   ]
+  },
+  "query_param": {
+   "lower": [
+    "360learning",
+    "401go",
+    "7shifts",
+    "absentify",
+    "activtrak",
+    "adp",
+    "alayacare",
+    "argyle",
+    "argyle9a25",
+    "assembled",
+    "atomic-fi",
+    "automatic-data-processing",
+    "bamboohr",
+    "bindbee",
+    "bonusly",
+    "breathe-hr",
+    "bridgit",
+    "bright-pattern",
+    "buk",
+    "cadana",
+    "careacademy",
+    "charliehr",
+    "charthop",
+    "checkr",
+    "cobee",
+    "connecteam",
+    "contalink",
+    "coolcollege",
+    "culture-amp",
+    "dailypay",
+    "deel-com",
+    "deputy",
+    "eightfold-ai",
+    "employ-inc",
+    "employment-hero",
+    "erpnext",
+    "ethena",
+    "factorial-hr",
+    "fama",
+    "fdx",
+    "finch",
+    "flowaccount",
+    "fountain-com",
+    "freeagent",
+    "freee",
+    "freshteam",
+    "genesys",
+    "gloat",
+    "goethena",
+    "greenhouse",
+    "greenhouse-io",
+    "guusto",
+    "hakuna",
+    "harri",
+    "harver",
+    "heymilo",
+    "hr-partner",
+    "hubstaff",
+    "humanity",
+    "intuit",
+    "justworks",
+    "knit",
+    "kolayik",
+    "kombo",
+    "kota",
+    "kufu",
+    "lattice",
+    "leapsome",
+    "lever-co",
+    "lucca",
+    "malt",
+    "micro1",
+    "mosey",
+    "namely",
+    "nayya",
+    "nectar-hr",
+    "niural",
+    "nobueno",
+    "nory",
+    "offendersearch-api",
+    "onpay",
+    "onsi",
+    "open-financial",
+    "optibus",
+    "oracle-fusion",
+    "oyster-hr",
+    "papaya-global",
+    "paychex-developer",
+    "peakon",
+    "peopleforce",
+    "peoplesoft",
+    "personio",
+    "pinpoint",
+    "pinwheel",
+    "plansource",
+    "puzzle",
+    "quickbooks-online",
+    "quinyx",
+    "quotapath",
+    "recruitee",
+    "reflektive",
+    "remote",
+    "remote-com",
+    "rippling",
+    "sage",
+    "sage-hr",
+    "sap-fieldglass",
+    "sesame-hr",
+    "shyft",
+    "simpplr",
+    "skedulo",
+    "small-improvements",
+    "smart-pension",
+    "smarthr",
+    "smartrecruiters",
+    "sterling-check",
+    "supaglue",
+    "talkpush",
+    "teambridge",
+    "teamohana",
+    "thatch",
+    "thatch-health",
+    "themuse",
+    "towers-watson",
+    "trakstar",
+    "truto",
+    "truv",
+    "ukg-pro",
+    "ukg-ready",
+    "university-of-wisconsin-madison",
+    "vcv",
+    "vidgrid",
+    "visier",
+    "visma",
+    "wagepoint",
+    "wagestream",
+    "wellhub",
+    "when-i-work",
+    "work-market",
+    "workday",
+    "workday-advanced-compensation",
+    "workday-business-processes",
+    "workday-extend",
+    "workday-integration",
+    "workday-integrations",
+    "workday-payroll",
+    "workday-studio",
+    "workera",
+    "workmotion",
+    "workstream",
+    "xero",
+    "yoodli",
+    "zeal-hq",
+    "zoho",
+    "zoho-people"
+   ],
+   "snake_case": [
+    "401go",
+    "7shifts",
+    "absentify",
+    "alayacare",
+    "argyle",
+    "argyle9a25",
+    "assembled",
+    "bindbee",
+    "bonusly",
+    "breathe-hr",
+    "buk",
+    "cadana",
+    "charliehr",
+    "checkr",
+    "contalink",
+    "coolcollege",
+    "culture-amp",
+    "deel-com",
+    "employ-inc",
+    "erpnext",
+    "factorial-hr",
+    "fama",
+    "finch",
+    "fountain-com",
+    "freeagent",
+    "freee",
+    "freshteam",
+    "gloat",
+    "greenhouse",
+    "greenhouse-io",
+    "harri",
+    "harver",
+    "heymilo",
+    "hr-partner",
+    "hubstaff",
+    "humanity",
+    "justworks",
+    "knit",
+    "kolayik",
+    "kombo",
+    "kota",
+    "kufu",
+    "micro1",
+    "mosey",
+    "namely",
+    "nectar-hr",
+    "niural",
+    "nobueno",
+    "nory",
+    "onpay",
+    "open-financial",
+    "oyster-hr",
+    "papaya-global",
+    "peakon",
+    "peopleforce",
+    "pinwheel",
+    "plansource",
+    "puzzle",
+    "quinyx",
+    "quotapath",
+    "reflektive",
+    "remote",
+    "remote-com",
+    "sage",
+    "sage-hr",
+    "shyft",
+    "skedulo",
+    "small-improvements",
+    "smart-pension",
+    "smarthr",
+    "supaglue",
+    "talentlms",
+    "talkpush",
+    "thatch",
+    "thatch-health",
+    "themuse",
+    "toggl",
+    "truto",
+    "ukg-pro",
+    "vcv",
+    "visier",
+    "wagepoint",
+    "wagestream",
+    "when-i-work",
+    "work-market",
+    "workera",
+    "workstream",
+    "yoodli",
+    "zoho",
+    "zoho-people"
+   ],
+   "camelCase": [
+    "360learning",
+    "activtrak",
+    "adp",
+    "atomic-fi",
+    "automatic-data-processing",
+    "bamboohr",
+    "bridgit",
+    "bright-pattern",
+    "cadana",
+    "careacademy",
+    "charthop",
+    "cobee",
+    "connecteam",
+    "deel-com",
+    "eightfold-ai",
+    "employment-hero",
+    "ethena",
+    "fdx",
+    "flowaccount",
+    "genesys",
+    "goethena",
+    "growthspace",
+    "harver",
+    "intuit",
+    "kolayik",
+    "lattice",
+    "leapsome",
+    "lincoln-national",
+    "lucca",
+    "malt",
+    "nayya",
+    "nectar-hr",
+    "nobueno",
+    "offendersearch-api",
+    "onsi",
+    "optibus",
+    "oracle-fusion",
+    "peakon",
+    "peoplesoft",
+    "puzzle",
+    "quinyx",
+    "remote",
+    "rippling",
+    "sap-fieldglass",
+    "sesame-hr",
+    "skedulo",
+    "small-improvements",
+    "smart-pension",
+    "teambridge",
+    "teamohana",
+    "towers-watson",
+    "trakstar",
+    "ukg-pro",
+    "university-of-wisconsin-madison",
+    "visier",
+    "visma",
+    "when-i-work",
+    "work-market",
+    "workday",
+    "workday-advanced-compensation",
+    "workday-benefits",
+    "workday-business-processes",
+    "workday-integration",
+    "workday-payroll",
+    "workday-studio",
+    "workleap",
+    "workmotion",
+    "xero",
+    "zeal-hq",
+    "zoho",
+    "zoho-people"
+   ],
+   "other": [
+    "7shifts",
+    "adp",
+    "alayacare",
+    "automatic-data-processing",
+    "buk",
+    "careacademy",
+    "checkr",
+    "dailypay",
+    "deel-com",
+    "genesys",
+    "hubstaff",
+    "humaans-io",
+    "humanity",
+    "lucca",
+    "namely",
+    "nobueno",
+    "oyster-hr",
+    "peakon",
+    "pinpoint",
+    "sap-fieldglass",
+    "sap-s4hana",
+    "sap-successfactors",
+    "shyft",
+    "small-improvements",
+    "smart-pension",
+    "talentlms",
+    "talkpush",
+    "thatch",
+    "thatch-health",
+    "trakstar",
+    "university-of-wisconsin-madison",
+    "vcv",
+    "vidgrid",
+    "workday",
+    "workday-integrations",
+    "workstream",
+    "zoho"
+   ],
+   "PascalCase": [
+    "buk",
+    "employment-hero",
+    "flowaccount",
+    "sap-fieldglass",
+    "visier",
+    "visma",
+    "workday-integrations",
+    "xero",
+    "zoho"
+   ],
+   "kebab-case": [
+    "nectar-hr",
+    "simpplr",
+    "small-improvements",
+    "teamohana"
+   ]
+  },
+  "pagination_param": {
+   "limit": [
+    "7shifts",
+    "argyle",
+    "argyle9a25",
+    "atomic-fi",
+    "bonusly",
+    "bridgit",
+    "cadana",
+    "charthop",
+    "connecteam",
+    "deel-com",
+    "eightfold-ai",
+    "ethena",
+    "fdx",
+    "finch",
+    "freee",
+    "genesys",
+    "gloat",
+    "goethena",
+    "harri",
+    "heymilo",
+    "humaans-io",
+    "humanity",
+    "justworks",
+    "kolayik",
+    "lattice",
+    "leapsome",
+    "lever-co",
+    "lucca",
+    "micro1",
+    "namely",
+    "nectar-hr",
+    "niural",
+    "nory",
+    "offendersearch-api",
+    "onpay",
+    "oracle-fusion",
+    "paychex-developer",
+    "personio",
+    "pinwheel",
+    "puzzle",
+    "quotapath",
+    "rippling",
+    "sesame-hr",
+    "shyft",
+    "skedulo",
+    "small-improvements",
+    "smart-pension",
+    "smartrecruiters",
+    "sterling-check",
+    "towers-watson",
+    "trakstar",
+    "truto",
+    "ukg-ready",
+    "vcv",
+    "visier",
+    "wagestream",
+    "when-i-work",
+    "work-market",
+    "workday",
+    "workday-advanced-compensation",
+    "workday-business-processes",
+    "workday-extend",
+    "workday-integration",
+    "workday-integrations",
+    "workday-payroll",
+    "workday-studio",
+    "workera",
+    "yoodli",
+    "zoho"
+   ],
+   "page": [
+    "401go",
+    "activtrak",
+    "alayacare",
+    "breathe-hr",
+    "buk",
+    "cadana",
+    "charliehr",
+    "checkr",
+    "contalink",
+    "employ-inc",
+    "factorial-hr",
+    "fama",
+    "fountain-com",
+    "freeagent",
+    "freshteam",
+    "gloat",
+    "greenhouse",
+    "greenhouse-io",
+    "guusto",
+    "harri",
+    "humanity",
+    "knit",
+    "kolayik",
+    "kota",
+    "kufu",
+    "leapsome",
+    "lucca",
+    "micro1",
+    "namely",
+    "nayya",
+    "nectar-hr",
+    "nobueno",
+    "offendersearch-api",
+    "optibus",
+    "oyster-hr",
+    "peopleforce",
+    "plansource",
+    "quinyx",
+    "reflektive",
+    "remote",
+    "remote-com",
+    "sage",
+    "sage-hr",
+    "sesame-hr",
+    "shyft",
+    "skedulo",
+    "smarthr",
+    "talkpush",
+    "teambridge",
+    "themuse",
+    "towers-watson",
+    "truto",
+    "ukg-pro",
+    "university-of-wisconsin-madison",
+    "vcv",
+    "vidgrid",
+    "visier",
+    "wagestream",
+    "when-i-work",
+    "workmotion",
+    "workstream",
+    "xero",
+    "zoho"
+   ],
+   "offset": [
+    "bridgit",
+    "charthop",
+    "connecteam",
+    "deel-com",
+    "fdx",
+    "finch",
+    "freee",
+    "harri",
+    "humanity",
+    "leapsome",
+    "lever-co",
+    "oracle-fusion",
+    "paychex-developer",
+    "peoplesoft",
+    "quotapath",
+    "rippling",
+    "skedulo",
+    "small-improvements",
+    "smart-pension",
+    "smartrecruiters",
+    "sterling-check",
+    "trakstar",
+    "ukg-ready",
+    "visier",
+    "workday",
+    "workday-advanced-compensation",
+    "workday-business-processes",
+    "workday-extend",
+    "workday-integration",
+    "workday-integrations",
+    "workday-payroll",
+    "workday-studio",
+    "xero"
+   ],
+   "per_page": [
+    "breathe-hr",
+    "buk",
+    "charliehr",
+    "checkr",
+    "employ-inc",
+    "factorial-hr",
+    "fountain-com",
+    "freeagent",
+    "greenhouse",
+    "greenhouse-io",
+    "humanity",
+    "kufu",
+    "namely",
+    "nayya",
+    "nobueno",
+    "offendersearch-api",
+    "oyster-hr",
+    "peakon",
+    "peopleforce",
+    "plansource",
+    "sage-hr",
+    "shyft",
+    "skedulo",
+    "smarthr",
+    "talkpush",
+    "ukg-pro",
+    "workstream",
+    "zoho"
+   ],
+   "page_size": [
+    "401go",
+    "activtrak",
+    "bindbee",
+    "buk",
+    "coolcollege",
+    "deel-com",
+    "employment-hero",
+    "flowaccount",
+    "genesys",
+    "knit",
+    "kombo",
+    "kota",
+    "leapsome",
+    "mosey",
+    "pinpoint",
+    "quinyx",
+    "remote",
+    "remote-com",
+    "small-improvements",
+    "supaglue",
+    "thatch",
+    "thatch-health",
+    "university-of-wisconsin-madison",
+    "visma",
+    "wagepoint",
+    "workmotion",
+    "xero"
+   ],
+   "cursor": [
+    "7shifts",
+    "activtrak",
+    "alayacare",
+    "argyle",
+    "argyle9a25",
+    "bindbee",
+    "cadana",
+    "culture-amp",
+    "deel-com",
+    "ethena",
+    "fountain-com",
+    "genesys",
+    "goethena",
+    "justworks",
+    "kombo",
+    "leapsome",
+    "nectar-hr",
+    "personio",
+    "pinwheel",
+    "puzzle",
+    "quinyx",
+    "skedulo",
+    "small-improvements",
+    "supaglue",
+    "truto",
+    "wellhub"
+   ],
+   "start": [
+    "absentify",
+    "argyle",
+    "argyle9a25",
+    "bamboohr",
+    "bridgit",
+    "buk",
+    "charthop",
+    "deputy",
+    "eightfold-ai",
+    "genesys",
+    "gloat",
+    "humanity",
+    "kolayik",
+    "onpay",
+    "papaya-global",
+    "quinyx",
+    "skedulo",
+    "visier",
+    "when-i-work",
+    "work-market",
+    "yoodli"
+   ],
+   "count": [
+    "activtrak",
+    "adp",
+    "alayacare",
+    "automatic-data-processing",
+    "deel-com",
+    "genesys",
+    "leapsome",
+    "malt",
+    "puzzle",
+    "remote",
+    "teamohana",
+    "when-i-work",
+    "zoho"
+   ],
+   "skip": [
+    "adp",
+    "atomic-fi",
+    "automatic-data-processing",
+    "bonusly",
+    "humaans-io",
+    "lever-co",
+    "onsi",
+    "papaya-global",
+    "sap-fieldglass",
+    "sap-s4hana",
+    "sap-successfactors"
+   ],
+   "size": [
+    "fama",
+    "guusto",
+    "quinyx",
+    "simpplr",
+    "small-improvements",
+    "teambridge",
+    "themuse"
+   ],
+   "after": [
+    "genesys",
+    "namely",
+    "puzzle",
+    "remote",
+    "skedulo",
+    "wagepoint"
+   ],
+   "top": [
+    "adp",
+    "automatic-data-processing",
+    "sap-fieldglass",
+    "sap-s4hana",
+    "sap-successfactors"
+   ],
+   "next": [
+    "cadana",
+    "deel-com",
+    "rippling"
+   ],
+   "max_results": [
+    "genesys",
+    "peoplesoft",
+    "visier"
+   ],
+   "before": [
+    "genesys",
+    "remote"
+   ],
+   "starting_after": [
+    "heymilo",
+    "lattice"
+   ],
+   "page_token": [
+    "quinyx",
+    "zoho"
+   ]
+  },
+  "property": {
+   "lower": [
+    "argyle",
+    "argyle9a25",
+    "bindbee",
+    "cadana",
+    "connecteam",
+    "dailypay",
+    "deel-com",
+    "employment-hero",
+    "finch",
+    "justworks",
+    "kombo",
+    "kufu",
+    "mosey",
+    "onpay",
+    "optibus",
+    "oyster-hr",
+    "pinwheel",
+    "puzzle",
+    "remote",
+    "remote-com",
+    "salsa",
+    "smarthr",
+    "thatch",
+    "thatch-health",
+    "wagepoint",
+    "when-i-work",
+    "wingspan",
+    "workday",
+    "workday-integration",
+    "workday-integrations",
+    "workday-payroll",
+    "xero"
+   ],
+   "snake_case": [
+    "argyle",
+    "argyle9a25",
+    "bindbee",
+    "deel-com",
+    "finch",
+    "justworks",
+    "kombo",
+    "kufu",
+    "mosey",
+    "onpay",
+    "pinwheel",
+    "remote",
+    "remote-com",
+    "smarthr",
+    "thatch",
+    "thatch-health",
+    "wagepoint",
+    "when-i-work"
+   ],
+   "camelCase": [
+    "cadana",
+    "connecteam",
+    "employment-hero",
+    "optibus",
+    "oyster-hr",
+    "puzzle",
+    "salsa",
+    "ukg-pro",
+    "wingspan",
+    "workday",
+    "workday-integration",
+    "workday-integrations",
+    "workday-payroll",
+    "xero"
+   ],
+   "PascalCase": [
+    "visma",
+    "xero"
+   ],
+   "other": [
+    "visma"
+   ]
+  }
+ }
+}

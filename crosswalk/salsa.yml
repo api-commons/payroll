@@ -1,0 +1,20 @@
+provider: salsa
+apis_io: https://apis.io/providers/salsa/
+context: payroll
+generated: '2026-11-10'
+concepts:
+  pay_run:
+    path_segment:
+    - payroll-runs
+    properties:
+      id: id
+      pay_date: payDate
+      period_end: payPeriodEnd
+      period_start: payPeriodStart
+      status: status
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/salsa-openapi.yml#DELETE /employers/{employerId}/payroll-runs/{payrollRunId}
+    - openapi/_original/salsa-openapi.yml#GET /employers/{employerId}/payroll-runs
+    - openapi/_original/salsa-openapi.yml#GET /employers/{employerId}/payroll-runs/{payrollRunId}
+    - openapi/_original/salsa-openapi.yml#POST /employers/{employerId}/payroll-runs

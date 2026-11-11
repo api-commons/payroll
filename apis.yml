@@ -1,0 +1,51 @@
+aid: common-payroll
+name: Payroll
+type: Common
+description: 'The common Payroll vocabulary, distilled from the harvested OpenAPI of 192 providers in APIs.io: shared
+  operations, JSON Schema per concept with measured adoption, and a crosswalk from the common names to each provider''s
+  own.'
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+- Application Programming Interface
+- API
+- Payroll
+- Global Payroll
+- Employer of Record
+- EOR
+- Common Schema
+created: '2026-11-10'
+modified: '2026-11-10'
+url: https://raw.githubusercontent.com/api-commons/payroll/main/apis.yml
+specificationVersion: '0.20'
+apis:
+- aid: common-payroll:payroll
+  name: Common Payroll Interface
+  description: The Payroll interface the market already shares, measured.
+  humanURL: https://github.com/api-commons/payroll
+  tags:
+  - Payroll
+  - Global Payroll
+  properties:
+  - type: OpenAPI
+    url: https://raw.githubusercontent.com/api-commons/payroll/main/openapi.yml
+  - type: Profile
+    url: https://raw.githubusercontent.com/api-commons/payroll/main/profile.yml
+  - type: Adopters
+    url: https://raw.githubusercontent.com/api-commons/payroll/main/adopters.yml
+  - type: Rules
+    url: https://raw.githubusercontent.com/api-commons/schema-commons/main/ruleset/schema-commons-naming.yaml
+  - type: JSONSchema
+    name: pay_run
+    url: https://raw.githubusercontent.com/api-commons/payroll/main/schema/pay_run.json
+  - type: JSONSchema
+    name: pay_stub
+    url: https://raw.githubusercontent.com/api-commons/payroll/main/schema/pay_stub.json
+  - type: JSONSchema
+    name: pay_schedule
+    url: https://raw.githubusercontent.com/api-commons/payroll/main/schema/pay_schedule.json
+common:
+- type: License
+  url: https://raw.githubusercontent.com/api-commons/payroll/main/LICENSE
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

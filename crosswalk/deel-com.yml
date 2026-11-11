@@ -1,0 +1,28 @@
+provider: deel-com
+apis_io: https://apis.io/providers/deel-com/
+context: payroll
+generated: '2026-11-10'
+concepts:
+  pay_stub:
+    path_segment:
+    - payslips
+    - paystubs
+    properties:
+      id: id
+      gross_pay: gross
+      net_pay: net
+      employee_id: worker_id
+      period_end: period_end
+      period_start: period_start
+      currency: currency
+      pay_run_id: payroll_id
+      pay_date: payment_date
+      created_at: created_at
+      status: status
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/deel-com-openapi.yml#GET /daas/payslips
+    - openapi/_original/deel-com-openapi.yml#GET /eor/workers/{worker_id}/payslips
+    - openapi/_original/deel-com-openapi.yml#GET /gp/workers/{id}/payslips
+    - openapi/_original/deel-global-payroll-api-openapi.yml#GET /payslips
+    - openapi/_original/deel-global-payroll-api-openapi.yml#GET /paystubs

@@ -1,0 +1,15 @@
+provider: connecteam
+apis_io: https://apis.io/providers/connecteam/
+context: payroll
+generated: '2026-11-10'
+concepts:
+  pay_stub:
+    path_segment:
+    - payslips
+    properties:
+      id: id
+      period_end: endDate
+      period_start: startDate
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/connecteam-openapi.json#POST /users/v1/users/{userId}/payslips

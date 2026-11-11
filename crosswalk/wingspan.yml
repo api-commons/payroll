@@ -1,0 +1,12 @@
+provider: wingspan
+apis_io: https://apis.io/providers/wingspan/
+context: payroll
+generated: '2026-11-10'
+concepts:
+  pay_run:
+    path_segment:
+    - payroll
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/wingspan-payments-openapi-original.yml#GET /payments/reports/payroll/{payrollId}

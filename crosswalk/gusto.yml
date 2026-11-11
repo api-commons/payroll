@@ -1,0 +1,22 @@
+provider: gusto
+apis_io: https://apis.io/providers/gusto/
+context: payroll
+generated: '2026-11-10'
+concepts:
+  pay_run:
+    path_segment:
+    - payrolls
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/gusto-openapi.yml#GET /v1/companies/{company_id}/payrolls
+    - openapi/_original/gusto-openapi.yml#POST /v1/companies/{company_id}/payrolls
+  pay_schedule:
+    path_segment:
+    - pay_schedules
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/gusto-openapi.yml#GET /v1/companies/{company_id}/pay_schedules
+    - openapi/_original/gusto-openapi.yml#POST /v1/companies/{company_id}/pay_schedules
+    - openapi/_original/gusto-openapi.yml#PUT /v1/companies/{company_id}/pay_schedules/{pay_schedule_id}

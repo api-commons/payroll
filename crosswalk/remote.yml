@@ -1,0 +1,35 @@
+provider: remote
+apis_io: https://apis.io/providers/remote/
+context: payroll
+generated: '2026-11-10'
+concepts:
+  pay_run:
+    path_segment:
+    - payroll-runs
+    properties:
+      id: id
+      period_end: period_end
+      period_start: period_start
+      status: status
+      currency: currency_code
+      type: type
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/remote-openapi-original.json#GET /v1/payroll-runs
+    - openapi/_original/remote-openapi-original.json#GET /v1/payroll-runs/{payroll_run_id}
+  pay_stub:
+    path_segment:
+    - payslips
+    properties:
+      id: id
+      gross_pay: gross_amount
+      net_pay: net_amount
+      period_end: period_end
+      period_start: period_start
+      currency: currency
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/remote-openapi-original.json#GET /v1/employee/payslips
+    - openapi/_original/remote-openapi-original.json#GET /v1/payslips
+    - openapi/_original/remote-payroll-billing-api-openapi.yml#GET /payslips
+    - openapi/_original/remote-payroll-billing-api-openapi.yml#GET /payslips/{payslip_id}
