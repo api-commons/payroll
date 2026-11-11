@@ -16,7 +16,7 @@ generated. Every number below is a count of providers.
 | payslip | 18 | 15 | id 87%, gross_pay 53%, net_pay 53% | payslips 11, paystubs 4, payslip 2, payments 2 |
 | pay_group | 4 | 3 | id 100%, name 100% | pay-groups 2, pay_schedules 1, paygroups 1 |
 
-Cohort: 192 providers with harvested OpenAPI, 27 crosswalks. Of the providers exposing a payroll: 56% create, 81% list, 69% fetch, 19% update, 19% delete. Generated 2026-11-10 by build.py.
+Cohort: 192 providers with harvested OpenAPI, 27 crosswalks. Of the providers exposing a payroll: 56% create, 81% list, 69% fetch, 19% update, 19% delete. Generated 2026-11-11 by build.py.
 <!-- /commons:summary -->
 
 Shares are of the providers with a readable resource schema for that concept. The

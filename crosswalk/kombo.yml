@@ -1,7 +1,7 @@
 provider: kombo
 apis_io: https://apis.io/providers/kombo/
 context: payroll
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   payroll:
     path_segment:

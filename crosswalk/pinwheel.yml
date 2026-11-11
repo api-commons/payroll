@@ -1,7 +1,7 @@
 provider: pinwheel
 apis_io: https://apis.io/providers/pinwheel/
 context: payroll
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   payslip:
     path_segment:
